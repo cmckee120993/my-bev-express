@@ -30,7 +30,7 @@ function Header() {
                 <h1>Beverage Express</h1>
             </header>
 
-            <Navigation currentPage={currentPage}
+            <Navbar currentPage={currentPage}
             handlePageChange={handlePageChange} />
 
             <main>
