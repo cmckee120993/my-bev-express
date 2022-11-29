@@ -4,6 +4,8 @@ import Home from './Home';
 import Search from './Search';
 import Slushies from './Slushies';
 import Contact from './Contact';
+import '../styles/Header.css';
+
 
 function Header() {
     const [currentPage, handlePageChange] = useState('Home');
@@ -27,7 +29,7 @@ function Header() {
     return (
         <div>
             <header className="header">
-                <h1>Beverage Express</h1>
+                <p className="tagline">We got a whole lotta beer!</p>
             </header>
 
             <Navbar currentPage={currentPage}

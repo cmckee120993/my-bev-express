@@ -1,0 +1,41 @@
+.navbar {
+    background: #000C66;
+}
+
+.beer-bottle {
+    height: 150px;
+    width: 8%;
+    position: relative;
+    top: 75px;
+}
+.nav-button {
+    background-image: radial-gradient(#dee1e4, #aaa9ad) ;
+    width: 23%;
+    border: solid 2px #000C66;
+    border-bottom: 10px #000C66 solid;
+}
+
+.nav-link {
+    text-decoration: none;
+}
+
+.tab-name {
+    color: #000C66;
+}
+
+.nav-button:hover {
+    background: #FFBF00;
+    color: white;
+}
+
+@media only screen and (min-width: 700px) {
+    .beer-bottle {
+        height: 200px;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .beer-bottle {
+        height: 250px;
+    }
+}
