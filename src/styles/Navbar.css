@@ -25,6 +25,9 @@
 
 .nav-button:hover {
     background: #FFBF00;
+}
+
+.tab-name:hover {
     color: white;
 }
 
