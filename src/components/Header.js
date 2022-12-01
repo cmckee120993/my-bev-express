@@ -4,6 +4,7 @@ import Home from './Home';
 import Search from './Search';
 import Slushies from './Slushies';
 import Contact from './Contact';
+import Background from './Background';
 import '../styles/Header.css';
 
 
@@ -34,10 +35,11 @@ function Header() {
 
             <Navbar currentPage={currentPage}
             handlePageChange={handlePageChange} />
-
-            <main>
-                <div>{renderPage(currentPage)}</div>
-            </main>
+            <Background>
+                <main>
+                    <div>{renderPage(currentPage)}</div>
+                </main>
+            </Background>
         </div>
     );
 };

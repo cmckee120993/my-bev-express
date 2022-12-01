@@ -1,8 +1,13 @@
 import React from 'react';
+import '../styles/Slushies.css';
+
+
 
 function Slushies() {
     return (
-        <h2>Slushies Here</h2>
+        <div>
+            <h2>Adult Slushies</h2>
+        </div>
     );
 };
 
