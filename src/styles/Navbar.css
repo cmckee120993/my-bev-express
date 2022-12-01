@@ -1,5 +1,6 @@
 .navbar {
     background: #000C66;
+    margin-top: -250px;
 }
 
 .beer-bottle {
@@ -31,6 +32,18 @@
     color: white;
 }
 
+@media only screen and (max-width: 550px) {
+    .navbar {
+        padding-top: 15px;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .navbar {
+        margin-top: -150px;
+    }
+}
+
 @media only screen and (min-width: 700px) {
     .beer-bottle {
         height: 200px;
@@ -40,5 +53,12 @@
 @media only screen and (min-width: 1000px) {
     .beer-bottle {
         height: 250px;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .beer-bottle {
+        height: 300px;
+        width: 75px;
     }
 }
