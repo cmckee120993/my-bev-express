@@ -4,8 +4,9 @@ import Home from './Home';
 import Search from './Search';
 import Slushies from './Slushies';
 import Contact from './Contact';
-import Background from './Background';
 import '../styles/Header.css';
+
+import sixPack from "../assets/images/bx-six-pack.png";
 
 
 function Header() {
@@ -35,11 +36,14 @@ function Header() {
 
             <Navbar currentPage={currentPage}
             handlePageChange={handlePageChange} />
-            <Background>
-                <main>
+            <main style={{
+            backgroundImage:`url(${sixPack})`,
+            backgroundRepeat: 'no-repeat',
+            backgroundSize: 'contain',
+            backgroundPosition: 'center center'
+            }}>
                     <div>{renderPage(currentPage)}</div>
-                </main>
-            </Background>
+            </main>
         </div>
     );
 };
