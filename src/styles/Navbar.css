@@ -1,6 +1,5 @@
 .navbar {
     background: #000C66;
-    margin-top: -250px;
 }
 
 .beer-bottle {
@@ -13,7 +12,7 @@
     background-image: radial-gradient(#dee1e4, #aaa9ad) ;
     width: 23%;
     border: solid 2px #000C66;
-    border-bottom: 10px #000C66 solid;
+    border-bottom: none;
 }
 
 .nav-link {
@@ -60,5 +59,9 @@
     .beer-bottle {
         height: 300px;
         width: 75px;
+    }
+
+    .nav-button {
+        width: 23.25%;
     }
 }

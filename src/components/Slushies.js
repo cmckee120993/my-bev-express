@@ -10,11 +10,15 @@ import purpleSlushy from '../assets/images/purple-slushy.png';
 import orangeSlushy from '../assets/images/orange-slushy.png';
 import teaSlushy from '../assets/images/tea-slushy.png';
 import creamSlushy from '../assets/images/cream-slushy.png';
+import sixPack from '../assets/images/bx-six-pack.png';
 
 function Slushies() {
     return (
-        <>
+        <>  
+            <div>
             <h2 className="slushy-title">Adult Slushies</h2>
+            <img className="slushy-header-image" src={sixPack} alt="Beverage Express Six Pack Logo"/>
+            </div>
             <div className="slushy-div">
                 <img className="slushy-one" src={redSlushy} alt="Red Slushy"/>
                 <p></p>

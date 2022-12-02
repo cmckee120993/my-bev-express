@@ -1,18 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Dokdo&family=Gloria+Hallelujah&display=swap");
+
 .slushy-title {
-    margin-top: 100px;
-    text-align: center;
+color: white;
+font-family: 'Dokdo', cursive;
+padding-top: 100px;
+margin-left: 20%;
+font-size: 50px;
+margin-top: -5%;
 }
+
 .slushy-div {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     flex-direction: row;
-    margin-top: 50px;
-    margin-bottom: 50px;
 }
 .slushy-div img {
     height: 300px;
     width: 225px;
     opacity: 100%;
     margin: 10px;
+}
+
+.slushy-header-image {
+    width: 75%;
 }

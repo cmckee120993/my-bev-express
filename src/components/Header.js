@@ -6,7 +6,7 @@ import Slushies from './Slushies';
 import Contact from './Contact';
 import '../styles/Header.css';
 
-import sixPack from "../assets/images/bx-six-pack.png";
+import backgroundImage from "../assets/images/background-image.jpg";
 
 
 function Header() {
@@ -37,10 +37,10 @@ function Header() {
             <Navbar currentPage={currentPage}
             handlePageChange={handlePageChange} />
             <main style={{
-            backgroundImage:`url(${sixPack})`,
+            backgroundImage:`url(${backgroundImage})`,
             backgroundRepeat: 'no-repeat',
-            backgroundSize: 'contain',
-            backgroundPosition: 'center center'
+            backgroundSize: 'cover', 
+            backgroundPosition: 'center top',
             }}>
                     <div>{renderPage(currentPage)}</div>
             </main>
