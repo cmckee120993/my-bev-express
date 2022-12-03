@@ -36,12 +36,14 @@ function Header() {
 
             <Navbar currentPage={currentPage}
             handlePageChange={handlePageChange} />
-            <main style={{
-            backgroundImage:`url(${backgroundImage})`,
-            backgroundRepeat: 'no-repeat',
-            backgroundSize: 'cover', 
-            backgroundPosition: 'center top',
-            }}>
+            <main 
+            // style={{
+            // backgroundImage:`url(${backgroundImage})`,
+            // backgroundRepeat: 'no-repeat',
+            // backgroundSize: 'cover', 
+            // backgroundPosition: 'center top',
+            // }}
+            >
                     <div>{renderPage(currentPage)}</div>
             </main>
         </div>

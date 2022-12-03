@@ -7,6 +7,7 @@ padding-top: 100px;
 margin-left: 20%;
 font-size: 50px;
 margin-top: -5%;
+background: none;
 }
 
 .slushy-div {
@@ -14,14 +15,17 @@ margin-top: -5%;
     justify-content: center;
     flex-wrap: wrap;
     flex-direction: row;
+    background: none;
 }
 .slushy-div img {
     height: 300px;
     width: 225px;
     opacity: 100%;
     margin: 10px;
+    background: none;
 }
 
 .slushy-header-image {
-    width: 75%;
+    width: 50%;
+    background: none;
 }

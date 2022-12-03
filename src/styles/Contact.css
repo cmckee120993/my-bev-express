@@ -1,0 +1,18 @@
+.form-div {
+    display: flex;
+    justify-content: center;
+    background: none;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    color: white;
+    background: none;
+}
+
+.contact-form input, .contact-form textarea {
+    margin: 10px;
+    background: white;
+}

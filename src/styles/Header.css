@@ -1,13 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Dokdo&display=swap");
 
 header {
-    background: #000C66;
+    background: none;
     width: 100%;
     display: flex;
     justify-content: center;
 }
 
 .tagline {
+    background: none;
     color: white;
     font-family: 'Dokdo', cursive;
     font-size: 40px;
