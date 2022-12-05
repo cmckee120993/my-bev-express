@@ -1,52 +1,278 @@
-import React from 'react';
-import '../styles/Slushies.css';
+import React from "react";
+import { Slide } from "react-slideshow-image";
+import "react-slideshow-image/dist/styles.css";
+import "../styles/Slushies.css";
 
-import redSlushy from '../assets/images/red-slushy.png';
-import blueSlushy from '../assets/images/blue-slushy.png';
-import yellowSlushy from '../assets/images/yellow-slushy.png';
-import peachSlushy from '../assets/images/peach-slushy.png';
-import pinkSlushy from '../assets/images/pink-slushy.png';
-import purpleSlushy from '../assets/images/purple-slushy.png';
-import orangeSlushy from '../assets/images/orange-slushy.png';
-import teaSlushy from '../assets/images/tea-slushy.png';
-import creamSlushy from '../assets/images/cream-slushy.png';
-import sixPack from '../assets/images/bx-six-pack.png';
+import redSlushy from "../assets/images/red-slushy.png";
+import blueSlushy from "../assets/images/blue-slushy.png";
+import yellowSlushy from "../assets/images/yellow-slushy.png";
+import peachSlushy from "../assets/images/peach-slushy.png";
+import pinkSlushy from "../assets/images/pink-slushy.png";
+import purpleSlushy from "../assets/images/purple-slushy.png";
+import orangeSlushy from "../assets/images/orange-slushy.png";
+import teaSlushy from "../assets/images/tea-slushy.png";
+import creamSlushy from "../assets/images/cream-slushy.png";
+import sixPack from "../assets/images/bx-six-pack.png";
 
-function Slushies() {
-    return (
-        <>  
-            <div>
-            <h2 className="slushy-title">Adult Slushies</h2>
-            <img className="slushy-header-image" src={sixPack} alt="Beverage Express Six Pack Logo"/>
-            </div>
-            <div className="slushy-div">
-                <img className="slushy-one" src={redSlushy} alt="Red Slushy"/>
-                <p></p>
-                <img className="slushy-two" src={blueSlushy} alt="Blue Slushy"/>
-                <p></p>
-                <img className="slushy-three" src={yellowSlushy} alt="Yellow Slushy"/>
-                <p></p>
-                <img className="slushy-four" src={peachSlushy} alt="Peach Slushy"/>
-                <p></p>
-                <img className="slushy-five" src={pinkSlushy} alt="Pink Slushy"/>
-                <p></p>
-                <img className="slushy-six" src={orangeSlushy} alt="Orange Slushy"/>
-                <p></p>
-                <img className="slushy-seven" src={purpleSlushy} alt="Purple Slushy"/>
-                <p></p>
-                <img className="slushy-eight" src={orangeSlushy} alt="Orange Slushy"/>
-                <p></p>
-                <img className="slushy-nine" src={teaSlushy} alt="Tea Slushy"/>
-                <p></p>
-                <img className="slushy-ten" src={creamSlushy} alt="Cream Slushy"/>
-                <p></p>
-                <img className="slushy-eleven" src={purpleSlushy} alt="Purple Slushy"/>
-                <p></p>
-                <img className="slushy-twelve" src={purpleSlushy} alt="Purple Slushy"/>
-                <p></p>
-            </div>
-        </>
-    );
+const Example = () => {
+  const images = [
+    redSlushy,
+    blueSlushy,
+    yellowSlushy,
+    peachSlushy,
+    pinkSlushy,
+    orangeSlushy,
+    purpleSlushy,
+    orangeSlushy,
+    teaSlushy,
+    creamSlushy,
+    purpleSlushy,
+    purpleSlushy,
+  ];
+
+  return (
+    <>
+      <div>
+        <h2 className="slushy-title">Adult Slushies</h2>
+        <img
+          className="slushy-header-image"
+          src={sixPack}
+          alt="Beverage Express Six Pack Logo"
+        />
+      </div>
+
+      <Slide>
+        <div className="each-slide-effect">
+          <div
+            className="image"
+            style={{
+              backgroundImage: `url(${images[0]})`,
+              backgroundRepeat: "no-repeat",
+              backgroundSize: "contain",
+              backgroundPosition: "left",
+              height: "500px",
+            }}
+          >
+            <span className="slushy-name">1</span>
+            <ul className='slushy-description'>
+                <li>1. Strawberry Daiquiri </li>
+                <li> MXD Drinks Co.</li>
+                <li>12% ABV</li>
+            </ul>
+          </div>
+        </div>
+        <div className="each-slide-effect">
+          <div
+            className="image"
+            style={{
+              backgroundImage: `url(${images[1]})`,
+              backgroundRepeat: "no-repeat",
+              backgroundSize: "contain",
+              backgroundPosition: "left",
+              height: "500px",
+            }}
+          >
+            <span className="slushy-name">2</span>
+            <ul className='slushy-description'>
+                <li>2. J-Series Blue Lemonade </li>
+                <li> Joose</li>
+                <li>14% ABV</li>
+            </ul>
+          </div>
+        </div>
+        <div className="each-slide-effect">
+          <div
+            className="image"
+            style={{
+              backgroundImage: `url(${images[2]})`,
+              backgroundRepeat: "no-repeat",
+              backgroundSize: "contain",
+              backgroundPosition: "left",
+              height: "500px",
+            }}
+          >
+            <span className="slushy-name">3</span>
+            <ul className='slushy-description'>
+                <li>3. Margarita</li>
+                <li> MXD Drinks Co.</li>
+                <li>12% ABV</li>
+            </ul>
+          </div>
+        </div>
+        <div className="each-slide-effect">
+          <div
+            className="image"
+            style={{
+              backgroundImage: `url(${images[3]})`,
+              backgroundRepeat: "no-repeat",
+              backgroundSize: "contain",
+              backgroundPosition: "left",
+              height: "500px",
+            }}
+          >
+            <span className="slushy-name">4</span>
+            <ul className='slushy-description'>
+                <li>4. Southern Peach Cocktail</li>
+                <li>Jack Daniel's Beverage Co.</li>
+                <li>4.8% ABV</li>
+            </ul>
+          </div>
+        </div>
+        <div className="each-slide-effect">
+          <div
+            className="image"
+            style={{
+              backgroundImage: `url(${images[4]})`,
+              backgroundRepeat: "no-repeat",
+              backgroundSize: "contain",
+              backgroundPosition: "left",
+              height: "500px",
+            }}
+          >
+            <span className="slushy-name">5</span>
+            <ul className='slushy-description'>
+                <li>5. Jamaican Me Happy</li>
+                <li>Seagram's Escapes</li>
+                <li>3.2% ABV</li>
+            </ul>
+          </div>
+        </div>
+        <div className="each-slide-effect">
+          <div
+            className="image"
+            style={{
+              backgroundImage: `url(${images[5]})`,
+              backgroundRepeat: "no-repeat",
+              backgroundSize: "contain",
+              backgroundPosition: "left",
+              height: "500px",
+            }}
+          >
+            <span className="slushy-name">6</span>
+            <ul className='slushy-description'>
+                <li>6. Mai Tai</li>
+                <li>MXD Drinks Co. </li>
+                <li>12% ABV</li>
+            </ul>
+          </div>
+        </div>
+        <div className="each-slide-effect">
+          <div
+            className="image"
+            style={{
+              backgroundImage: `url(${images[6]})`,
+              backgroundRepeat: "no-repeat",
+              backgroundSize: "contain",
+              backgroundPosition: "left",
+              height: "500px",
+            }}
+          >
+            <span className="slushy-name">7</span>
+            <ul className='slushy-description'>
+                <li>7. Grape Blowout</li>
+                <li>Neon Burst</li>
+                <li>8% ABV</li>
+            </ul>
+          </div>
+        </div>
+        <div className="each-slide-effect">
+          <div
+            className="image"
+            style={{
+              backgroundImage: `url(${images[7]})`,
+              backgroundRepeat: "no-repeat",
+              backgroundSize: "contain",
+              backgroundPosition: "left",
+              height: "500px",
+            }}
+          >
+            <span className="slushy-name">8</span>
+            <ul className='slushy-description'>
+                <li>8. Mang-O-Rita</li>
+                <li>Bud Light Lime</li>
+                <li>8% ABV</li>
+            </ul>
+          </div>
+        </div>
+        <div className="each-slide-effect">
+          <div
+            className="image"
+            style={{
+              backgroundImage: `url(${images[8]})`,
+              backgroundRepeat: "no-repeat",
+              backgroundSize: "contain",
+              backgroundPosition: "left",
+              height: "500px",
+            }}
+          >
+            <span className="slushy-name">9</span>
+            <ul className='slushy-description'>
+                <li>9. Long Island Iced Tea</li>
+                <li>MXD Drink Co.</li>
+                <li>12% ABV</li>
+            </ul>
+          </div>
+        </div>
+        <div className="each-slide-effect">
+          <div
+            className="image"
+            style={{
+              backgroundImage: `url(${images[9]})`,
+              backgroundRepeat: "no-repeat",
+              backgroundSize: "contain",
+              backgroundPosition: "left",
+              height: "500px",
+            }}
+          >
+            <span className="slushy-name">10</span>
+            <ul className='slushy-description'>
+                <li>10. Irish Cream Latte</li>
+                <li>Rebel Hard Coffee</li>
+                <li>5% ABV</li>
+            </ul>
+          </div>
+        </div>
+        <div className="each-slide-effect">
+          <div
+            className="image"
+            style={{
+              backgroundImage: `url(${images[10]})`,
+              backgroundRepeat: "no-repeat",
+              backgroundSize: "contain",
+              backgroundPosition: "left",
+              height: "500px",
+            }}
+          >
+            <span className="slushy-name">11</span>
+            <ul className='slushy-description'>
+                <li>11. J-Series Blackberry</li>
+                <li>Joose</li>
+                <li>14% ABV</li>
+            </ul> 
+          </div>
+        </div>
+        <div className="each-slide-effect">
+          <div
+            className="image"
+            style={{
+              backgroundImage: `url(${images[11]})`,
+              backgroundRepeat: "no-repeat",
+              backgroundSize: "contain",
+              backgroundPosition: "left",
+              height: "500px",
+            }}
+          >
+            <span className="slushy-name">12</span>
+            <ul className='slushy-description'>
+                <li>12. Niagara Blush</li>
+                <li>SpringGate Vineyard</li>
+                <li>8% ABV</li>
+            </ul>
+          </div>
+        </div>
+      </Slide>
+    </>
+  );
 };
 
-export default Slushies;
+export default Example;

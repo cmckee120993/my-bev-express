@@ -1,3 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Dokdo&family=Gloria+Hallelujah&display=swap");
+
+/* font-family: 'Dokdo', cursive; */
+/* font-family: 'Gloria Hallelujah', cursive; */
+
 .navbar {
     background: none;
 }
@@ -12,7 +17,6 @@
 .nav-button {
     background-image: radial-gradient(#dee1e4, #aaa9ad) ;
     width: 23%;
-    border: solid 2px #000C66;
     border-bottom: none;
 }
 
@@ -24,6 +28,7 @@
 .tab-name {
     color: #000C66;
     background: none;
+    font-family: 'Gloria Hallelujah', cursive;
 }
 
 .nav-button:hover {

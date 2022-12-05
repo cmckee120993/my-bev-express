@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Dokdo&display=swap");
 
+main, main div {
+background: none;
+}
+
 header {
     background: none;
     width: 100%;

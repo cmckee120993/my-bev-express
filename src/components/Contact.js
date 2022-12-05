@@ -2,6 +2,8 @@ import React from 'react';
 import { useForm, ValidationError } from '@formspree/react';
 import '../styles/Contact.css'
 
+import sixPack from '../assets/images/bx-six-pack.png';
+
 function Contact() {
     const [state, handleSubmit] = useForm("mvoyjebj");
   if (state.succeeded) {
@@ -9,6 +11,8 @@ function Contact() {
   }
   return (
     <div className="form-div">
+      <h2 className="contact-title">Contact Us!</h2> 
+      <img className="contact-header-image" src={sixPack} alt="Beverage Express Six Pack Logo"/>
       <form className="contact-form" onSubmit={handleSubmit}>
         <label htmlFor="name">
             Name
@@ -31,6 +35,9 @@ function Contact() {
         field="email"
         errors={state.errors}
       />
+      <label htmlFor="message">
+        Your Message
+      </label>
       <textarea       id="message"
         name="message"
       />
@@ -39,7 +46,7 @@ function Contact() {
         field="message"
         errors={state.errors}
       />
-      <button type="submit" disabled={state.submitting}>
+      <button className="contact-submit" type="submit" disabled={state.submitting}>
         Submit
       </button>
     </form>

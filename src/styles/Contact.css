@@ -1,18 +1,58 @@
-.form-div {
-    display: flex;
-    justify-content: center;
+@import url("https://fonts.googleapis.com/css2?family=Dokdo&family=Gloria+Hallelujah&display=swap");
+
+/* font-family: 'Dokdo', cursive; */
+/* font-family: 'Gloria Hallelujah', cursive; */
+
+.contact-title {
+    color: white;
+    font-family: 'Dokdo', cursive;
+    padding-top: 100px;
+    margin-left: 20%;
+    font-size: 50px;
+    margin-top: -5%;
+    background: none;
+    }
+
+.contact-header-image {
+    width: 50%;
     background: none;
 }
 
 .contact-form {
     display: flex;
     flex-direction: column;
-    width: 75%;
+    width: 100%;
     color: white;
     background: none;
+   align-items: center;
 }
 
 .contact-form input, .contact-form textarea {
     margin: 10px;
+    width: 75%;
     background: white;
+}
+
+.contact-form textarea {
+    height: 200px;
+}
+
+.contact-form label {
+    background: none;
+    font-size: 25px;
+    font-family: 'Gloria Hallelujah', cursive;
+}
+
+.contact-submit {
+    background-image: radial-gradient(#dee1e4, #aaa9ad) ;
+    width: 23%;
+    color: #000C66;
+    font-family: 'Dokdo', cursive;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.contact-submit:hover {
+    color: white;
+    background: #FFBF00;
 }

@@ -6,8 +6,6 @@ import Slushies from './Slushies';
 import Contact from './Contact';
 import '../styles/Header.css';
 
-import backgroundImage from "../assets/images/background-image.jpg";
-
 
 function Header() {
     const [currentPage, handlePageChange] = useState('Home');
@@ -36,14 +34,7 @@ function Header() {
 
             <Navbar currentPage={currentPage}
             handlePageChange={handlePageChange} />
-            <main 
-            // style={{
-            // backgroundImage:`url(${backgroundImage})`,
-            // backgroundRepeat: 'no-repeat',
-            // backgroundSize: 'cover', 
-            // backgroundPosition: 'center top',
-            // }}
-            >
+            <main>
                     <div>{renderPage(currentPage)}</div>
             </main>
         </div>
