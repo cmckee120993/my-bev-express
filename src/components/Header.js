@@ -6,6 +6,8 @@ import Slushies from './Slushies';
 import Contact from './Contact';
 import '../styles/Header.css';
 
+import Store from '../assets/images/bev-express-site-image.png'
+
 
 function Header() {
     const [currentPage, handlePageChange] = useState('Home');
@@ -30,6 +32,7 @@ function Header() {
         <div>
             <header className="header">
                 <p className="tagline">We got a whole lotta beer!</p>
+                <img className="store-image" src={Store} alt="Beverage Express Storefront"/>
             </header>
 
             <Navbar currentPage={currentPage}

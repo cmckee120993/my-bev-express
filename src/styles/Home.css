@@ -1,1 +1,80 @@
 @import url("https://fonts.googleapis.com/css2?family=Dokdo&family=Gloria+Hallelujah&display=swap");
+
+.home-header, .home-description, .email-listserv {
+    color: white;
+    background: none;
+    font-family: 'Gloria Hallelujah', cursive;;
+}
+
+.home-header {
+    text-align: center;
+}
+
+.home-description {
+    margin-left: 25%;
+    margin-right: 25%;
+    text-align: justify;
+    border: solid white 2px;
+    padding: 20px;
+}
+
+.home-content {
+    display: flex;
+    align-items: center;
+}
+
+.email-listserv {
+    padding: 25px;
+    width: 40%;
+    border: solid white 2px;
+    margin: 25px;
+}
+
+.listserv-header {
+    text-align: center;
+    background: none;
+}
+
+.listserv-description {
+    text-align: justify;
+    font-size: 15px;
+    background: none;
+}
+
+.listserv-form {
+    background: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.listserv-form label {
+    background: none;
+    margin-top: 10px;
+}
+
+.listserv-form input {
+    background: white;
+    width: 75%;
+}
+
+.listserv-form button {
+    background-image: radial-gradient(#dee1e4, #aaa9ad) ;
+    width: 50%;
+    color: #000C66;
+    font-family: 'Dokdo', cursive;
+    font-size: 25px;
+    margin-top: 10px;
+}
+
+.listserv-form button:hover {
+    color: white;
+    background: #FFBF00;
+}
+
+.recent-ad {
+    width: 40%;
+}
+
+.recent-ad video {
+    width: 100%;
+}
