@@ -36,7 +36,7 @@ function Home() {
         </form>
       </div>
       <div className="recent-ad">
-        <video src={VideoAd} controls="controls" autoplay="true"/>
+        <video src={VideoAd} controls="controls" autoPlay={true} type="video/mp4" />
       </div>
       </div>
     </>

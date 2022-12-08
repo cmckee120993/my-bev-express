@@ -1,46 +1,25 @@
-import React, {useState} from 'react';
-import Navbar from './Navbar';
-import Home from './Home';
-import Search from './Search';
-import Slushies from './Slushies';
-import Contact from './Contact';
+import React from 'react';
+import {Link} from 'react-router-dom';
 import '../styles/Header.css';
 
-import Store from '../assets/images/bev-express-site-image.png'
+// import Store from '../assets/images/'
 
 
 function Header() {
-    const [currentPage, handlePageChange] = useState('Home');
-
-    const renderPage = () => {
-        switch (currentPage) {
-            case 'Home':
-                return <Home />;
-            case 'Search':
-                return <Search />;
-            case 'Slushies':
-                return <Slushies />;
-            case 'Contact':
-                return <Contact />;
-
-            default:
-                return <Home />
-        }
-    };
 
     return (
-        <div>
+        <>
+         <button className="login-button">
+                    <a href="/login">
+                        <h2 className="tab-name">Login</h2>
+                        <Link to="/login">Login</Link>
+                    </a>
+                </button>
             <header className="header">
                 <p className="tagline">We got a whole lotta beer!</p>
-                <img className="store-image" src={Store} alt="Beverage Express Storefront"/>
+                {/* <img className="store-image" src={Store} alt="Beverage Express Storefront"/> */}
             </header>
-
-            <Navbar currentPage={currentPage}
-            handlePageChange={handlePageChange} />
-            <main>
-                    <div>{renderPage(currentPage)}</div>
-            </main>
-        </div>
+        </>
     );
 };
 
