@@ -10,16 +10,13 @@ const resolvers = {
 
 		order: async (parent, { _id }, context) => {
 			if (context.user) {
-				const user = await User.findById(context.user._id).populate({
-					path: 'orders.products'
-				});
-				return user.orders.id(_id);
+				return await Order.findById(_id).populate('products');
 		}
 		throw new AuthenticationError('Not logged in.')
 	}, 
 
 	users: async () => {
-		return await User.find()
+		return await User.find().populate('orders')
 	},
 	
 	products: async (parent, args) => {
@@ -69,10 +66,13 @@ const resolvers = {
 			throw new AuthenticationError('Not logged in');
 		},
 		
-		addOrder: async (parent, {orderOwner, orderDelivDate, products}, context) => {
+		addOrder: async (parent, args, context) => {
 			if(context.user) {
-			const order = new Order({ products });
-			await User.findByIdAndUpdate(context.user._id, { $push: { orders: order } });
+			const order = await Order.create(args);
+			console.log(order);
+			console.log(context.user);
+			const test = await User.findByIdAndUpdate(context.user._id, { $push: { orders: order._id } }, {new: true});
+			console.log(test);
 			return order;
 			}
 
@@ -84,10 +84,12 @@ const resolvers = {
 				return Order.findOneAndUpdate(
 					{ _id: orderId },
 					{
-						$addToSet: {name,
+						$push: { products: 
+								{	name,
 									price,
 									quantity,
-									}
+								}
+							}
 					},
 					{
 						new: true,

@@ -9,7 +9,7 @@ const orderSchema = new Schema({
         default: Date.now
     },
     deliveryDate: {
-        type: Date,
+        type: String,
         required: true
     },
     products: [Product.schema]
