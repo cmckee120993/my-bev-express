@@ -19,10 +19,6 @@ const resolvers = {
 		return await User.find().populate('orders')
 	},
 	
-	products: async (parent, args) => {
-		return Product.find()
-	},
-	
 	},
 
 	Mutation: {
@@ -58,21 +54,11 @@ const resolvers = {
 
 			return { token, user };
 		},
-
-		addProduct: async (parent, args, context) => {
-			if(context.user) {
-				return Product.create(args);
-			}
-			throw new AuthenticationError('Not logged in');
-		},
 		
 		addOrder: async (parent, args, context) => {
 			if(context.user) {
 			const order = await Order.create(args);
-			console.log(order);
-			console.log(context.user);
 			const test = await User.findByIdAndUpdate(context.user._id, { $push: { orders: order._id } }, {new: true});
-			console.log(test);
 			return order;
 			}
 
