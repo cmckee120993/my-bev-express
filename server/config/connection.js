@@ -1,17 +1,9 @@
 const mongoose = require('mongoose');
 require('dotenv').config();
 
-mongoose.connect(process.env.DB_URL, {
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/my-bev-express', {
 	useNewUrlParser: true,
 	useUnifiedTopology: true,
-	useCreateIndex: true,
-})
-	.then(()=> {
-	console.log("Successfully connected to MongoDB Atlas!");
-	})
-	.catch((error) => {
-		console.log("Unable to connect to MongoDB Atlas ):");
-		console.error(error);
-	});
+});
 
 module.exports = mongoose.connection;
