@@ -2,8 +2,6 @@ import React from "react";
 import { useForm, ValidationError } from "@formspree/react";
 import "../styles/Home.css";
 
-import VideoAd from '../assets/videos/most-recent-ad.mp4'
-
 function Home() {
   const [state, handleSubmit] = useForm("mgeqjglb");
   return (
@@ -36,7 +34,7 @@ function Home() {
         </form>
       </div>
       <div className="recent-ad">
-        <video src={VideoAd} controls="controls" autoPlay={true} type="video/mp4" />
+
       </div>
       </div>
     </>
