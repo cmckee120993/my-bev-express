@@ -31,3 +31,18 @@ export const ADD_USER = gql`
         }
     }
 `;
+
+export const ADD_ORDER = gql`
+  mutation addOrder ($products: [ID] ! {
+    addOrder(products: $products) {
+    purchaseDate
+    deliveryDate
+    products {
+      _id
+      name
+      price
+      category
+      }
+    }
+  }
+`;

@@ -12,9 +12,14 @@ function Header() {
          <button className="login-button">
                     <a href="/login">
                         <h2 className="tab-name">Login</h2>
-                        <Link to="/login">Login</Link>
+                        {/* <Link to="/login">Login</Link> */}
                     </a>
                 </button>
+            <button className="cart">
+                <a href="/cart">
+                    <h2>Your Order</h2>
+                </a> 
+            </button>
             <header className="header">
                 <p className="tagline">We got a whole lotta beer!</p>
                 {/* <img className="store-image" src={Store} alt="Beverage Express Storefront"/> */}
