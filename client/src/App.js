@@ -15,6 +15,7 @@ import Search from './pages/Search';
 import Slushies from './pages/Slushies';
 import Contact from './pages/Contact';
 import Login from './pages/Login';
+import Signup from './pages/Signup';
 import './App.css';
 
 const httpLink = createHttpLink ({
@@ -54,6 +55,10 @@ function App() {
                 <Route
                   path="/login"
                   element={<Login/>}
+                />
+                <Route
+                  path="/signup"
+                  element={<Signup/>}
                 />
                 <Route
                   path="/search"
