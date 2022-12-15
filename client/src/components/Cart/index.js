@@ -9,6 +9,9 @@ import { useStoreContext } from '../../utils/GlobalState';
 import { TOGGLE_CART, ADD_MULTIPLE_TO_CART } from '../../utils/actions';
 import './style.css';
 
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faCartShopping} from "@fortawesome/free-solid-svg-icons";
+
 const stripePromise = loadStripe('pk_test_51MEq6CFWXFK5U75ZexkNlDZ7FbeNBjUQutlMmE5qu4Nv61d5lMsh2OR441vtErI3a1UDxgbocc9KWU4tWgE91nH500DGaFrWuq');
 
 const Cart = () => {
@@ -62,24 +65,22 @@ const Cart = () => {
 
     if (!state.cartOpen) {
         return (
-            <div onClick={toggleCart}>
-                <span role='img' aria-label='cart'>
-                🛒
-                </span>
+            <div className="cart-div" onClick={toggleCart}>
+                <FontAwesomeIcon className="cart-image" icon={faCartShopping}/>
             </div>
         );
     }
 
     return (
-        <div>
-            <div onClick={toggleCart}>
+        <div className="cart-div">
+            <div className="toggle-cart" onClick={toggleCart}>
                 [close]
             </div>
-            <h2>Shopping Cart</h2>
+            <h2 className="cart-title">Shopping Cart</h2>
             {state.cart.length ? (
                 <div>
                     {state.cart.map((item) => (
-                        <CartItem key={item._id} item={item} />
+                        <CartItem key={item.name} item={item} />
                     ))}
                 
                 <div>

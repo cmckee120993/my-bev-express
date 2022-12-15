@@ -24,25 +24,31 @@ function Search(item) {
       };
       
         axios.request(options).then(function (response) {
-        console.log(response.data.Results);
+          console.log(response.data.Results);
         setAPIData(response.data.Results);
       }).catch(function (error) {
         console.error(error);
       })
     };
-    const
-    {
-      _id
-    } = item;
+    
 
     const [state, dispatch] = useStoreContext();
-    const { cart } = state
+    const { cart } = state;
+    
     const addToCart = () => {
-      const itemInCart = cart.find((cartItem) => cartItem._id === _id)
+    
+    const cartButton = document.querySelector('.cart-button');
+    const itemName = cartButton.getAttribute('itemName');
+    const itemPrice = cartButton.getAttribute('itemPrice');
+    
+      console.log(itemName);
+      console.log(itemPrice);
+      const itemInCart = cart.find((cartItem) => cartItem.name === itemName)
+      console.log(itemInCart);
       if(itemInCart) {
         dispatch({
           type: UPDATE_CART_QUANTITY,
-          _id: _id,
+          name: itemName,
           purchaseQuantity: parseInt(itemInCart.purchaseQuantity) + 1
         });
         idbPromise ('cart', 'put', {
@@ -52,29 +58,31 @@ function Search(item) {
       } else {
         dispatch({
           type: ADD_TO_CART,
-          product: { ...item, purchaseQuantity: 1 }
+          product: { name: itemName, price: itemPrice,  purchaseQuantity: 1 }
         });
         idbPromise('cart', 'put', { ...item, purchaseQuantity: 1});
       }
     }
-
+  
       return (
         <>
             <input type="text" className="search-words" placeholder="Search for our products here..."></input>
             <button type="submit" className="search-button" onClick={searchItem}>Search</button>
             <Card.Group itemsPerRow={4}>
                 {APIData.map((item) => {
+                  let price = item.CaseRetail;
+                  let name = item.Description;
                     return (
                         <Card>
                             <Card.Content>
-                                <Card.Header>{item.Description}</Card.Header>
+                                <Card.Header>{name}</Card.Header>
                                 <Card.Description>
-                                    {item.CaseRetail}
+                                    {price}
                                     {item.QuantityAvailable}
                                     {item.Category}
                                 </Card.Description>
                             </Card.Content>
-                            <button onClick={addToCart}>Add to Cart</button>
+                            <button itemName={item.Description} itemPrice={item.CaseRetail} onClick={addToCart} className="cart-button">Add to Cart</button>
                         </Card>
                     )
                 })}

@@ -39,6 +39,12 @@
     color: white;
 }
 
+.extra-nav {
+    background: none;
+    display: flex;
+    justify-content: center;
+}
+
 @media only screen and (max-width: 550px) {
     .navbar {
         padding-top: 15px;

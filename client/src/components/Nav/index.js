@@ -1,6 +1,5 @@
 import "./style.css";
 import Auth from "../../utils/auth";
-import { Link } from "react-router-dom";
 
 import bottle from "../../assets/images/bx-beer-bottle.png";
 
@@ -8,30 +7,30 @@ function Navbar() {
   function showNavigation() {
     if (Auth.loggedIn()) {
       return (
-        <div>
-          <button>
+        <div className="extra-nav">
+          <button className="nav-button">
             <a href="/orderHistory">
-              <h2>Order History</h2>
+              <h2 className="tab-name">Order History</h2>
             </a>
           </button>
-          <button onClick={() => Auth.logout()}>
+          <button onClick={() => Auth.logout()} className="nav-button">
             <a href="/">
-              <h2>Logout</h2>
+              <h2 className="tab-name">Logout</h2>
             </a>
           </button>
         </div>
       );
     } else {
       return (
-        <div>
-          <button>
+        <div className="extra-nav">
+          <button className="nav-button">
             <a href="/signup">
-              <h2>Signup</h2>
+              <h2 className="tab-name">Signup</h2>
             </a>
           </button>
-          <button>
+          <button className="nav-button">
             <a href="/login">
-              <h2>Login</h2>
+              <h2 className="tab-name">Login</h2>
             </a>
           </button>
         </div>

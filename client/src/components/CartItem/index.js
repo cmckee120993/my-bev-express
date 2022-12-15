@@ -9,7 +9,7 @@ const CartItem = ({ item }) => {
     const removeFromCart = item => {
         dispatch({
             type:REMOVE_FROM_CART,
-            _id: item._id
+            name: item.name
         });
         idbPromise('cart', 'delete', { ...item });
     };
@@ -19,13 +19,13 @@ const CartItem = ({ item }) => {
         if (value === '0') {
             dispatch({
                 type: REMOVE_FROM_CART,
-                _id: item._id
+                name: item.name
             });
             idbPromise('cart', 'delete', { ...item });
         } else {
             dispatch({
                 type: UPDATE_CART_QUANTITY,
-                _id: item._id,
+                name: item.name,
                 purchaseQuantity: parseInt(value)
             });
             idbPromise('cart', 'put', { ...item, purchaseQuantity: parseInt(value) });
@@ -48,7 +48,7 @@ const CartItem = ({ item }) => {
                     value={item.purchaseQuantity}
                     onChange={onChange}
                     />
-                    <span onClick={() => removeFromCart(item)}>Delete</span>
+                    <button onClick={() => removeFromCart(item)}>Delete</button>
             </div>
         </div>
     );
