@@ -4,7 +4,7 @@ import axios from 'axios';
 import { useStoreContext } from '../utils/GlobalState'
 import { ADD_TO_CART, UPDATE_CART_QUANTITY } from '../utils/actions';
 import { idbPromise } from '../utils/helpers';
-
+import '../styles/Search.css'
 
 
 
@@ -35,11 +35,11 @@ function Search(item) {
     const [state, dispatch] = useStoreContext();
     const { cart } = state;
     
-    const addToCart = () => {
-    
-    const cartButton = document.querySelector('.cart-button');
-    const itemName = cartButton.getAttribute('itemName');
-    const itemPrice = cartButton.getAttribute('itemPrice');
+    const addToCart = (event) => {
+     
+    let cartButton = event.target;
+    let itemName = cartButton.getAttribute('itemName');
+    let itemPrice = cartButton.getAttribute('itemPrice');
     
       console.log(itemName);
       console.log(itemPrice);
@@ -63,7 +63,7 @@ function Search(item) {
         idbPromise('cart', 'put', { ...item, purchaseQuantity: 1});
       }
     }
-  
+
       return (
         <>
             <input type="text" className="search-words" placeholder="Search for our products here..."></input>
@@ -73,7 +73,7 @@ function Search(item) {
                   let price = item.CaseRetail;
                   let name = item.Description;
                     return (
-                        <Card>
+                        <Card className="card">
                             <Card.Content>
                                 <Card.Header>{name}</Card.Header>
                                 <Card.Description>
