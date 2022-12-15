@@ -12,6 +12,10 @@ const orderSchema = new Schema({
         type: String,
         required: true
     },
+    orderOwner: {
+        type: String,
+        required: true
+    },
     products: [Product.schema]
 });
 

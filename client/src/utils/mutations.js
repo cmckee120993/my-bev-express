@@ -33,11 +33,18 @@ export const ADD_USER = gql`
 `;
 
 export const ADD_ORDER = gql`
-  mutation addOrder ($orderOwner: String!, $deliveryDate: String!) {
+ mutation AddOrder($orderOwner: String!, $deliveryDate: String!) {
   addOrder(orderOwner: $orderOwner, deliveryDate: $deliveryDate) {
     _id
     purchaseDate
     deliveryDate
+    orderOwner
+    products {
+      _id
+      name
+      price
+      quantity
+    }
   }
 }
 `;

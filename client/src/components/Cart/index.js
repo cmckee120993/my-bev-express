@@ -8,6 +8,8 @@ import Auth from '../../utils/auth';
 import { useStoreContext } from '../../utils/GlobalState';
 import { TOGGLE_CART, ADD_MULTIPLE_TO_CART } from '../../utils/actions';
 import './style.css';
+import { useMutation } from '@apollo/client';
+import { ADD_ORDER } from '../../utils/mutations';
 
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faCartShopping} from "@fortawesome/free-solid-svg-icons";
@@ -16,7 +18,7 @@ const stripePromise = loadStripe('pk_test_51MEq6CFWXFK5U75ZexkNlDZ7FbeNBjUQutlMm
 
 const Cart = () => {
     const [state, dispatch] = useStoreContext();
-    const [getCheckout, { data }] = useLazyQuery(QUERY_CHECKOUT);
+    const [addOrder, { data }] = useMutation(ADD_ORDER);
 
     useEffect(() => {
         if (data) {
@@ -51,20 +53,29 @@ const Cart = () => {
 
     function sendOrder() {
         const products = [];
-        const deliveryDate = document.querySelector('.deliv-date').value;
-        const orderOwner = document.querySelector('.order-owner').value;
 
         state.cart.forEach((item) => {
-            for (let i = 0; i < item.purchaseQuantity; i++) {
-                products.push({name: item.name, price: item.price, quantity: item.purchaseQuantity});
-            }
-        });
-
+            console.log(item);
+            for (let i=0; i < item.purchaseQuantity; i++) {
+                if (!products.item) {
+                    products.push(item);
+                }
+        const deliveryDate = document.querySelector('.deliv-date').value;
+        const orderOwner = document.querySelector('.order-owner').value;
+        const orderTotal = document.querySelector('.cart-total').value;
         console.log(products);
         console.log(deliveryDate);
         console.log(orderOwner);
-    }
+        console.log(orderTotal);
+        addOrder({
+            variables: {deliveryDate: deliveryDate, orderOwner: orderOwner, products: products },
+        });
+        };
+    });
+};
+        
 
+       
     if (!state.cartOpen) {
         return (
             <div className="cart-div" onClick={toggleCart}>
@@ -86,7 +97,10 @@ const Cart = () => {
                     ))}
                 
                 <div>
-                    <strong>Total: ${calculateTotal()}</strong>
+                    <label>
+                    Total:
+                    </label>
+                    <strong className='cart-total'> ${calculateTotal()}</strong>
                     <label>Delivery Date:</label>
                     <input className="deliv-date" type="date"></input>
                     <label>Name:</label>

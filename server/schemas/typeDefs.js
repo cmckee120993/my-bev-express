@@ -21,7 +21,9 @@ const typeDefs = gql`
     _id: ID
     purchaseDate: String
     deliveryDate: String
+    orderOwner: String
     products: [Product]
+    orderTotal: Float
   }
 
   type Auth {
