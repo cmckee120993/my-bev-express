@@ -16,7 +16,12 @@ const orderSchema = new Schema({
         type: String,
         required: true
     },
-    products: [Product.schema]
+    orderTotal: {
+        type: Number,
+        min: 0.01
+    },
+    products: [Product.schema],
+    
 });
 
 const Order = mongoose.model('Order', orderSchema);

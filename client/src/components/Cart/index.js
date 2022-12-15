@@ -57,19 +57,17 @@ const Cart = () => {
         state.cart.forEach((item) => {
             console.log(item);
             for (let i=0; i < item.purchaseQuantity; i++) {
-                if (!products.item) {
                     products.push(item);
-                }
-        const deliveryDate = document.querySelector('.deliv-date').value;
-        const orderOwner = document.querySelector('.order-owner').value;
-        const orderTotal = document.querySelector('.cart-total').value;
-        console.log(products);
-        console.log(deliveryDate);
-        console.log(orderOwner);
-        console.log(orderTotal);
-        addOrder({
-            variables: {deliveryDate: deliveryDate, orderOwner: orderOwner, products: products },
-        });
+            const deliveryDate = document.querySelector('.deliv-date').value;
+            const orderOwner = document.querySelector('.order-owner').value;
+            const orderTotal = document.querySelector('.cart-total').total;
+            console.log(products);
+            console.log(deliveryDate);
+            console.log(orderOwner);
+            console.log(orderTotal);
+            addOrder({
+                variables: {deliveryDate: deliveryDate, orderOwner: orderOwner },
+            });
         };
     });
 };

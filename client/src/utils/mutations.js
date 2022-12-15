@@ -40,11 +40,11 @@ export const ADD_ORDER = gql`
     deliveryDate
     orderOwner
     products {
-      _id
       name
       price
       quantity
     }
+    orderTotal
   }
 }
 `;
