@@ -10,12 +10,10 @@ export const QUERY_USERS = gql`
 	}
 `;
 
-export const QUERY_ME = gql`
-	query Query {
-		me {
-			username
-			email
-			_id
+export const QUERY_CHECKOUT = gql`
+	query getCheckout($products: [ID]!) {
+		checkout (products: $products){
+			session
 		}
 	}
 `;

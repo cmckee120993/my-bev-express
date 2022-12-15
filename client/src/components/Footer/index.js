@@ -1,13 +1,13 @@
 import React from 'react';
-import '../styles/Footer.css';
+import './style.css';
 
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faFacebook} from "@fortawesome/free-brands-svg-icons";
 import {faInstagram} from "@fortawesome/free-brands-svg-icons";
 import {faUntappd} from "@fortawesome/free-brands-svg-icons";
 import {faPaperPlane} from "@fortawesome/free-solid-svg-icons";
-import beerLogo from '../assets/images/bev-exp-logo.png';
-import clayLogo from '../assets/images/clay-logo.png';
+import beerLogo from '../../assets/images/bev-exp-logo.png';
+import clayLogo from '../../assets/images/clay-logo.png';
 
 function Footer() {
     return (

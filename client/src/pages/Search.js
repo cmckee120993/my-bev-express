@@ -1,17 +1,16 @@
-import React, {useState, useEffect} from 'react';
-import {Card, Input} from 'semantic-ui-react';
+import React, { useState } from 'react';
+import { Card } from 'semantic-ui-react';
 import axios from 'axios';
-
-import { useMutation } from '@apollo/client';
-import { ADD_ORDER } from '../utils/mutations';
-
-
+import { useStoreContext } from '../utils/GlobalState'
+import { ADD_TO_CART, UPDATE_CART_QUANTITY } from '../utils/actions';
+import { idbPromise } from '../utils/helpers';
 
 
 
-function Search() {
+
+
+function Search(item) {
   const [APIData, setAPIData] = useState([]);
-  const [addOrder] = useMutation(ADD_ORDER);
     
   const searchItem = function() {
   const searchParams =  document.querySelector('.search-words').value;
@@ -31,10 +30,36 @@ function Search() {
         console.error(error);
       })
     };
+    const
+    {
+      _id
+    } = item;
+
+    const [state, dispatch] = useStoreContext();
+    const { cart } = state
+    const addToCart = () => {
+      const itemInCart = cart.find((cartItem) => cartItem._id === _id)
+      if(itemInCart) {
+        dispatch({
+          type: UPDATE_CART_QUANTITY,
+          _id: _id,
+          purchaseQuantity: parseInt(itemInCart.purchaseQuantity) + 1
+        });
+        idbPromise ('cart', 'put', {
+          ...itemInCart,
+          purchaseQuantity: parseInt(itemInCart.purchaseQuantity) +1
+        });
+      } else {
+        dispatch({
+          type: ADD_TO_CART,
+          product: { ...item, purchaseQuantity: 1 }
+        });
+        idbPromise('cart', 'put', { ...item, purchaseQuantity: 1});
+      }
+    }
 
       return (
         <>
-          <button onClick={addOrder}>Start An Order</button>
             <input type="text" className="search-words" placeholder="Search for our products here..."></input>
             <button type="submit" className="search-button" onClick={searchItem}>Search</button>
             <Card.Group itemsPerRow={4}>
@@ -49,6 +74,7 @@ function Search() {
                                     {item.Category}
                                 </Card.Description>
                             </Card.Content>
+                            <button onClick={addToCart}>Add to Cart</button>
                         </Card>
                     )
                 })}

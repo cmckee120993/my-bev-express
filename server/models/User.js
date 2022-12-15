@@ -24,13 +24,7 @@ const userSchema = new Schema(
 			type: String,
 			required: true,
 		},
-		orders: [
-			{ 
-				type: Schema.Types.ObjectId,
-				ref: 'Order',
-			},
-			
-		]
+		orders: [Order.schema]
 		// orders: [Order.schema]
 	},
 	// set this to use virtual below
