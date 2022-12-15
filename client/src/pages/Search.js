@@ -44,7 +44,7 @@ function Search(item) {
       console.log(itemName);
       console.log(itemPrice);
       const itemInCart = cart.find((cartItem) => cartItem.name === itemName)
-      console.log(itemInCart);
+      console.log(cart);
       if(itemInCart) {
         dispatch({
           type: UPDATE_CART_QUANTITY,

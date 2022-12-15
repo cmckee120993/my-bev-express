@@ -49,18 +49,20 @@ const Cart = () => {
         return sum.toFixed(2);
     }
 
-    function submitCheckout() {
-        const productIds = [];
+    function sendOrder() {
+        const products = [];
+        const deliveryDate = document.querySelector('.deliv-date').value;
+        const orderOwner = document.querySelector('.order-owner').value;
 
         state.cart.forEach((item) => {
             for (let i = 0; i < item.purchaseQuantity; i++) {
-                productIds.push(item._id);
+                products.push({name: item.name, price: item.price, quantity: item.purchaseQuantity});
             }
         });
 
-        getCheckout({
-            variables: { products: productIds } ,
-        });
+        console.log(products);
+        console.log(deliveryDate);
+        console.log(orderOwner);
     }
 
     if (!state.cartOpen) {
@@ -85,9 +87,12 @@ const Cart = () => {
                 
                 <div>
                     <strong>Total: ${calculateTotal()}</strong>
-
+                    <label>Delivery Date:</label>
+                    <input className="deliv-date" type="date"></input>
+                    <label>Name:</label>
+                    <input className="order-owner" type="text"></input>
                     {Auth.loggedIn() ? (
-                        <button onClick={submitCheckout}>Checkout</button>
+                        <button onClick={sendOrder}>Send Order</button>
                     ) : (
                         <span>(log in to check out)</span>
                     )}

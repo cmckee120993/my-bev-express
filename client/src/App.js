@@ -11,7 +11,7 @@ import { setContext } from '@apollo/client/link/context';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Navbar from './components/Nav';
-// import Cart from './components/Cart';
+import Checkout from './pages/Checkout';
 import Home from './pages/Home';
 import Search from './pages/Search';
 import Slushies from './pages/Slushies';
@@ -60,10 +60,10 @@ function App() {
                   path="/login"
                   element={<Login/>}
                 />
-                {/* <Route
-                  path="/cart"
-                  element={<Cart/>}
-                  /> */}
+                <Route
+                  path="/checkout"
+                  element={<Checkout/>}
+                  />
                 <Route
                   path="/signup"
                   element={<Signup/>}
