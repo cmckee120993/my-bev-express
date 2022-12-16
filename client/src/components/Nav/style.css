@@ -53,6 +53,9 @@ nav {
     .navbar {
         padding-top: 15px;
     }
+    .extra-nav {
+        margin-top: -15px;
+    }
 }
 
 @media only screen and (min-width: 700px) {

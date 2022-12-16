@@ -34,13 +34,14 @@ function Login(props) {
 
     return (
         <>
-        <h2>Login</h2>
-        <Link to="/signup"> No account? Signup now!</Link>
+        <h2 className="login-title">Login</h2>
+        
 
-        <form onSubmit={handleFormSubmit}>
+        <form className="login-form" onSubmit={handleFormSubmit}>
             <div>
-                <label htmlFor="email">Email:</label>
+                <label className="login-label-email" htmlFor="email">Email:</label>
                 <input 
+                className="login-input"
                 placeholder="youremail@example.com"
                 name="email"
                 type="email"
@@ -48,8 +49,9 @@ function Login(props) {
                 onChange={handleChange}/>
             </div>
             <div>
-                <label htmlFor="pwd">Password:</label>
+                <label className="login-label" htmlFor="pwd">Password:</label>
                 <input 
+                className="login-input"
                 placeholder="*****"
                 name="password"
                 type="password"
@@ -63,9 +65,12 @@ function Login(props) {
                 </div>
             ) : null}
             <div>
-                <button type="submit">Submit</button>
+                <button className="login-button"type="submit">Submit</button>
             </div>
         </form>
+        <div className="signup-link-div">
+            <Link className="signup-link" to="/signup"> No account? Signup now!</Link>
+        </div>
         </>
     );
 };
