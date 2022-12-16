@@ -3,6 +3,12 @@
 /* font-family: 'Dokdo', cursive; */
 /* font-family: 'Gloria Hallelujah', cursive; */
 
+.contact-title-div {
+    display: flex;
+    background: none;
+    justify-content: space-around;
+    align-items: center;
+}
 .contact-title {
     color: white;
     font-family: 'Dokdo', cursive;
@@ -11,6 +17,8 @@
     font-size: 50px;
     margin-top: -5%;
     background: none;
+    text-align: center;
+    
     }
 
 .contact-header-image {

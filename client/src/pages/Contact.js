@@ -11,8 +11,10 @@ function Contact() {
   }
   return (
     <div className="form-div">
+      <div className="contact-title-div">
       <h2 className="contact-title">Contact Us!</h2> 
       <img className="contact-header-image" src={sixPack} alt="Beverage Express Six Pack Logo"/>
+      </div>
       <form className="contact-form" onSubmit={handleSubmit}>
         <label htmlFor="name">
             Name
