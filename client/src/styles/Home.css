@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Dokdo&family=Gloria+Hallelujah&display=swap");
 
-.home-header, .home-description, .email-listserv {
+.home-header, .home-description, .home-content, .email-listserv {
     color: white;
     background: none;
     font-family: 'Gloria Hallelujah', cursive;

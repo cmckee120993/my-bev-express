@@ -66,7 +66,7 @@ function Navbar() {
           </a>
         </button>
       </div>
-      <div>{showNavigation()}</div>
+      <div className="navbar">{showNavigation()}</div>
     </nav>
   );
 }

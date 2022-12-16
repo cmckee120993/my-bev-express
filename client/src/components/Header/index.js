@@ -9,11 +9,12 @@ function Header() {
 
     return (
         <>
+        <Cart/>
             <header className="header">
                 <p className="tagline">We got a whole lotta beer!</p>
                 {/* <img className="store-image" src={Store} alt="Beverage Express Storefront"/> */}
             </header>
-            <Cart/>
+            
         </>
     );
 };

@@ -3,6 +3,10 @@
 /* font-family: 'Dokdo', cursive; */
 /* font-family: 'Gloria Hallelujah', cursive; */
 
+nav {
+    background: none;
+}
+
 .navbar {
     background: none;
 }
