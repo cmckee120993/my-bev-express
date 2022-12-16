@@ -13,7 +13,13 @@ const typeDefs = gql`
   type Product {
     name: String
     price: Float
-    quantity: Int
+    purchaseQuantity: Int
+  }
+
+  input ProductInput {
+    name: String
+    price: Float
+    purchaseQuantity: Int
   }
 
   type Order {
@@ -37,7 +43,7 @@ const typeDefs = gql`
   type Query {
     orders: [Order]
     order(_id: ID!): Order
-    users: [User]
+    user: User
     checkout(products: [ID]!): Checkout
   }
 
@@ -48,7 +54,7 @@ const typeDefs = gql`
       email: String!
       password: String!
     ): Auth
-    addOrder(orderOwner: String!, deliveryDate: String!): Order
+    addOrder(orderOwner: String!, deliveryDate: String!, products: [ProductInput]): Order
     addToOrder(orderId: ID!, name: String!, price: Int!, quantity: Int!): Order
     updateUser(
       firstName: String

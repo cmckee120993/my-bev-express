@@ -11,13 +11,13 @@ import { setContext } from '@apollo/client/link/context';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Navbar from './components/Nav';
-import Checkout from './pages/Checkout';
 import Home from './pages/Home';
 import Search from './pages/Search';
 import Slushies from './pages/Slushies';
 import Contact from './pages/Contact';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
+import CustomerPanel from './pages/CustomerPanel';
 import './App.css';
 import { StoreProvider } from './utils/GlobalState';
 
@@ -61,12 +61,12 @@ function App() {
                   element={<Login/>}
                 />
                 <Route
-                  path="/checkout"
-                  element={<Checkout/>}
-                  />
-                <Route
                   path="/signup"
                   element={<Signup/>}
+                />
+                <Route 
+                path="/customerpanel"
+                element={<CustomerPanel/>}
                 />
                 <Route
                   path="/search"

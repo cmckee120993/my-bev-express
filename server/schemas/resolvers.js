@@ -16,8 +16,12 @@ const resolvers = {
 			throw new AuthenticationError('Not logged in.')
 		}, 
 
-		users: async () => {
-			return await User.find().populate('orders')
+		user: async (parent, args, context) => {
+			if (context.user) {
+				const user = await User.findById(context.user._id);
+				return user;
+			}
+			throw new AuthenticationError('Not logged in');
 		},
 
 		checkout: async (parent, args, context) => {

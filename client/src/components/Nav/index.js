@@ -9,8 +9,8 @@ function Navbar() {
       return (
         <div className="extra-nav">
           <button className="nav-button">
-            <a href="/orderHistory">
-              <h2 className="tab-name">Order History</h2>
+            <a href="/customerpanel">
+              <h2 className="tab-name">Customer Panel</h2>
             </a>
           </button>
           <button onClick={() => Auth.logout()} className="nav-button">

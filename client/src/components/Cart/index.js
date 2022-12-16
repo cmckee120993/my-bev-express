@@ -56,7 +56,7 @@ const Cart = () => {
 
         state.cart.forEach((item) => {
             console.log(item);
-            for (let i=0; i < item.purchaseQuantity; i++) {
+            // for (let i=0; i < item.purchaseQuantity; i++) {
                     products.push(item);
             const deliveryDate = document.querySelector('.deliv-date').value;
             const orderOwner = document.querySelector('.order-owner').value;
@@ -66,9 +66,9 @@ const Cart = () => {
             console.log(orderOwner);
             console.log(orderTotal);
             addOrder({
-                variables: {deliveryDate: deliveryDate, orderOwner: orderOwner },
+                variables: {deliveryDate: deliveryDate, orderOwner: orderOwner, products: [...products] },
             });
-        };
+        // };
     });
 };
         
@@ -89,7 +89,7 @@ const Cart = () => {
             </div>
             <h2 className="cart-title">Shopping Cart</h2>
             {state.cart.length ? (
-                <div>
+                <div className="cart-info">
                     {state.cart.map((item) => (
                         <CartItem key={item.name} item={item} />
                     ))}
@@ -111,7 +111,7 @@ const Cart = () => {
                 </div>
             </div>
             ) : (
-                <h3>
+                <h3 className="shop-more-warning">
                     You haven't added anything to your cart yet!
                 </h3>
             )}

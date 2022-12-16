@@ -1,7 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Dokdo&family=Gloria+Hallelujah&display=swap");
+
 .cart-div {
-    background: none;
+    background:none;
     display: flex;
     justify-content: flex-end;
+    padding: 5px;
 }
 
 .cart-image {
@@ -13,8 +16,25 @@
 
 .toggle-cart {
     background: none;
+    font-family: 'Dokdo', cursive;
+    font-size: 20px;
 }
-/* 
-.cart-title {
 
-} */
+.cart-title {
+width: 50%;
+background: none;
+font-family: 'Dokdo', cursive;
+font-size: 30px;
+}
+
+.shop-more-warning {
+    background: none;
+    text-align: center;
+    font-family: 'Gloria Hallelujah', cursive;
+}
+
+.cart-info {
+    background: none;
+    border: solid 5px white;
+    font-family: 'Gloria Hallelujah', cursive;
+}

@@ -17,7 +17,7 @@
 .nav-button {
     background-image: radial-gradient(#dee1e4, #aaa9ad) ;
     width: 23%;
-    border-bottom: none;
+    border: none;
 }
 
 .nav-link {

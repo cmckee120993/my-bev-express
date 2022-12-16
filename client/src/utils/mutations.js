@@ -11,6 +11,17 @@ export const LOGIN = gql`
   }
 `;
 
+export const UPDATE_USER =gql`
+mutation updateUser ($firstName: String, $lastName: String, $email: String, $password: String) {
+  updateUser(firstName: $firstName, lastName: $lastName, email: $email, password: $password) {
+    _id
+    firstName
+    lastName
+    email
+  }
+}
+`
+
 export const ADD_USER = gql`
     mutation addUser (
         $firstName: String!
@@ -33,8 +44,8 @@ export const ADD_USER = gql`
 `;
 
 export const ADD_ORDER = gql`
- mutation AddOrder($orderOwner: String!, $deliveryDate: String!) {
-  addOrder(orderOwner: $orderOwner, deliveryDate: $deliveryDate) {
+ mutation addOrder($orderOwner: String!, $deliveryDate: String!, $products: [ProductInput]) {
+  addOrder(orderOwner: $orderOwner, deliveryDate: $deliveryDate, products: $products) {
     _id
     purchaseDate
     deliveryDate
@@ -42,7 +53,7 @@ export const ADD_ORDER = gql`
     products {
       name
       price
-      quantity
+      purchaseQuantity
     }
     orderTotal
   }
