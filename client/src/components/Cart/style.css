@@ -37,4 +37,32 @@ font-size: 30px;
     background: none;
     border: solid 5px white;
     font-family: 'Gloria Hallelujah', cursive;
+    padding: 10px;
+}
+
+.cart-info input {
+    background: white;
+    color: black;
+    margin: 5px;
+}
+
+.cart-input-div {
+    display: flex;
+    flex-direction: column;
+    background: none
+}
+
+.total-div {
+    text-align: center;
+    margin-top: 20px;
+}
+.cart-button {
+    background-image: radial-gradient(#dee1e4, #aaa9ad) ;
+    color: #000C66;
+    font-family: 'Gloria Hallelujah', cursive;
+}
+
+.cart-button:hover {
+    background: #FFBF00;
+    color: white;
 }

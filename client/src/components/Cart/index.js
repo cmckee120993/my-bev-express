@@ -94,17 +94,19 @@ const Cart = () => {
                         <CartItem key={item.name} item={item} />
                     ))}
                 
-                <div>
-                    <label>
-                    Total:
-                    </label>
-                    <strong className='cart-total'> ${calculateTotal()}</strong>
+                <div className="cart-input-div">
+                    <div className="total-div">
+                        <label>
+                        Total:
+                        </label>
+                        <strong className='cart-total'> ${calculateTotal()}</strong>
+                    </div>
                     <label>Delivery Date:</label>
                     <input className="deliv-date" type="date"></input>
                     <label>Name:</label>
                     <input className="order-owner" type="text"></input>
                     {Auth.loggedIn() ? (
-                        <button onClick={sendOrder}>Send Order</button>
+                        <button className="cart-button" onClick={sendOrder}>Send Order</button>
                     ) : (
                         <span>(log in to check out)</span>
                     )}
