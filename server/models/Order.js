@@ -18,7 +18,8 @@ const orderSchema = new Schema({
     },
     orderTotal: {
         type: Number,
-        min: 0.01
+        min: 0.01,
+        required: true
     },
     products: [Product.schema],
     

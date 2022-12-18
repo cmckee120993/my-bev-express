@@ -10,7 +10,7 @@ function CustomerPanel() {
     if (data) {
         user = data.user;
     };
-
+    console.log(data);
     const [formState, setFormState] = useState({email: '', firstName: '', lastName: ''})
     const [updateUser] = useMutation(UPDATE_USER);
 
@@ -79,6 +79,14 @@ function CustomerPanel() {
                             <h3>
                             {new Date(parseInt(order.purchaseDate)).toLocaleDateString()}
                             </h3>
+
+                            <div>
+                                <ul>
+                                    <li>{order.orderOwner}</li>
+                                    <li>{order.deliveryDate}</li>
+                                    <li>{order.orderTotal}</li>
+                                </ul>
+                            </div>
                         
                         <div>
                             {order.products.map(({name, price, purchaseQuantity}, index) => (

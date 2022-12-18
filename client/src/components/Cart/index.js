@@ -1,7 +1,4 @@
 import React, { useEffect } from 'react';
-import { loadStripe } from '@stripe/stripe-js';
-import { useLazyQuery } from '@apollo/client';
-import { QUERY_CHECKOUT } from '../../utils/queries';
 import { idbPromise } from '../../utils/helpers';
 import CartItem from '../CartItem';
 import Auth from '../../utils/auth';
@@ -10,23 +7,16 @@ import { TOGGLE_CART, ADD_MULTIPLE_TO_CART } from '../../utils/actions';
 import './style.css';
 import { useMutation } from '@apollo/client';
 import { ADD_ORDER } from '../../utils/mutations';
-
+// import { ADD_TO_ORDER } from '../../utils/mutations';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faCartShopping} from "@fortawesome/free-solid-svg-icons";
 
-const stripePromise = loadStripe('pk_test_51MEq6CFWXFK5U75ZexkNlDZ7FbeNBjUQutlMmE5qu4Nv61d5lMsh2OR441vtErI3a1UDxgbocc9KWU4tWgE91nH500DGaFrWuq');
+
 
 const Cart = () => {
     const [state, dispatch] = useStoreContext();
-    const [addOrder, { data }] = useMutation(ADD_ORDER);
-
-    useEffect(() => {
-        if (data) {
-            stripePromise.then((res) => {
-                res.redirectToCheckout({ sessionID: data.checkout.session });
-            });
-        }
-    }, [data]);
+    const [addOrder] = useMutation(ADD_ORDER);
+    // const [addToOrder] = useMutation(ADD_TO_ORDER);
 
     useEffect(() => {
         async function getCart() {
@@ -52,24 +42,39 @@ const Cart = () => {
     }
 
     function sendOrder() {
-        const products = [];
-
-        state.cart.forEach((item) => {
-            console.log(item);
-            // for (let i=0; i < item.purchaseQuantity; i++) {
-                    products.push(item);
             const deliveryDate = document.querySelector('.deliv-date').value;
             const orderOwner = document.querySelector('.order-owner').value;
-            const orderTotal = document.querySelector('.cart-total').total;
-            console.log(products);
-            console.log(deliveryDate);
-            console.log(orderOwner);
-            console.log(orderTotal);
+            const orderTotal = document.querySelector('.cart-total').textContent;
+            const orderTotalFloat = parseFloat(orderTotal)
+            console.log(typeof orderTotalFloat)
             addOrder({
-                variables: {deliveryDate: deliveryDate, orderOwner: orderOwner, products: [...products] },
-            });
-        // };
+                variables: {
+                    deliveryDate: deliveryDate, 
+                    orderOwner: orderOwner,
+                    orderTotal: orderTotalFloat
+                }
+                });
+        state.cart.forEach((item) => {
+        //   addToOrder({
+        //     variables: {
+        //         name: item.name,
+        //         price: item.price,
+        //         purchaseQuantity: item.purchaseQuantity
+        //     }
+        //   })
     });
+    console.log(deliveryDate);
+    console.log(orderOwner);
+    console.log(orderTotal);
+    // console.log(products)
+    // console.log(order);
+    // order.push(
+    //     {
+    //     deliveryDate: deliveryDate, 
+    //     orderOwner: orderOwner, 
+    //     products: products}
+    //     );
+   
 };
         
 
@@ -97,9 +102,9 @@ const Cart = () => {
                 <div className="cart-input-div">
                     <div className="total-div">
                         <label>
-                        Total:
+                        Total: $
                         </label>
-                        <strong className='cart-total'> ${calculateTotal()}</strong>
+                        <p className='cart-total'>{calculateTotal()}</p>
                     </div>
                     <label>Delivery Date:</label>
                     <input className="deliv-date" type="date"></input>

@@ -32,7 +32,7 @@ const Example = () => {
 
   return (
     <>
-      <div>
+      <div className='slushy-title-div'>
         <h2 className="slushy-title">Adult Slushies</h2>
         <img
           className="slushy-header-image"
@@ -41,10 +41,10 @@ const Example = () => {
         />
       </div>
 
-      <Slide>
+      <Slide className="slushy-slideshow">
         <div className="each-slide-effect">
           <div
-            className="image"
+            className="slushy-image"
             style={{
               backgroundImage: `url(${images[0]})`,
               backgroundRepeat: "no-repeat",

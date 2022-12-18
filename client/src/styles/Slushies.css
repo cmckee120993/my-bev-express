@@ -1,5 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Dokdo&family=Gloria+Hallelujah&display=swap");
 
+.slushy-title-div {
+  display: flex;
+  background: none;
+  justify-content: space-around;
+  align-items: center;
+}
 .slushy-title {
 color: white;
 font-family: 'Dokdo', cursive;
@@ -10,18 +16,18 @@ margin-top: -5%;
 background: none;
 }
 
+.slushy-slideshow, .each-slide-effect, .slushy-image, .image, .react-slideshow-container, .react-slideshow-wrapper, #root div {
+  background: none;
+}
+
+#root .react-slideshow-container svg {
+  background: none;
+}
+
 .slushy-header-image {
   width: 50%;
   background: none;
 }
-
-/* .each-slide-effect > div {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-size: cover;
-  height: 350px;
-} */
 
 .each-slide-effect span {
   padding: 20px;

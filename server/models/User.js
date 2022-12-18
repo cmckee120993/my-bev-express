@@ -25,7 +25,6 @@ const userSchema = new Schema(
 			required: true,
 		},
 		orders: [Order.schema]
-		// orders: [Order.schema]
 	},
 	// set this to use virtual below
 	{
