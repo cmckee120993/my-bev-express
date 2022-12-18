@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
 import Auth from '../utils/auth';
 import { ADD_USER } from '../utils/mutations';
+import '../styles/Signup.css';
 
 function Signup(props) {
     const [formState, setFormState] = useState({ email: '', password: ''});
@@ -32,13 +33,13 @@ function Signup(props) {
 
     return (
         <>
-        <h2>Signup</h2>
-        <Link to="/login">Already have an account? Login</Link>
-
-        <form onSubmit={handleFormSubmit}>
+        <h2 className="signup-title">Signup</h2>
+        
+        <form className='signup-form' onSubmit={handleFormSubmit}>
             <div>
-                <label htmlFor="firstName">FIrst Name:</label>
+                <label className='signup-label' htmlFor="firstName">First Name:</label>
                 <input
+                    className='signup-input'
                     placeholder="First"
                     name="firstName"
                     type="firstName"
@@ -47,8 +48,9 @@ function Signup(props) {
                     />
             </div>
             <div>
-                <label htmlFor="lastName">Last Name:</label>
+                <label className='signup-label' htmlFor="lastName">Last Name:</label>
                 <input
+                    className='signup-input'
                     placeholder="Last"
                     name="lastName"
                     type="lastName"
@@ -57,8 +59,9 @@ function Signup(props) {
                 />
             </div>
             <div>
-                <label htmlFor="email">Email:</label>
+                <label className='signup-label-email' htmlFor="email">Email:</label>
                 <input 
+                    className='signup-input'
                     placeholder="youremail@example.com"
                     name="email"
                     type="email"
@@ -67,8 +70,9 @@ function Signup(props) {
                     />
             </div>
             <div>
-                <label htmlFor="pwd">Password:</label>
+                <label className='signup-label-password' htmlFor="pwd">Password:</label>
                 <input 
+                    className='signup-input'
                     placeholder="*****"
                     name="password"
                     type="password"
@@ -77,8 +81,12 @@ function Signup(props) {
                     />
             </div>
             <div>
-                <button type="submit">Submit</button>
+                <button className='signup-button' type="submit">Submit</button>
             </div>
+        <div className="login-link-div">
+            <Link className='login-link' to="/login">Already have an account? Login</Link>
+        </div>
+
         </form>
         </>
     );
