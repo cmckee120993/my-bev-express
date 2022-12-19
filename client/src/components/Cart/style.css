@@ -55,6 +55,10 @@ font-size: 60px;
 .total-div {
     text-align: center;
     margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: none;
 }
 .cart-button {
     background-image: radial-gradient(#dee1e4, #aaa9ad) ;
@@ -65,4 +69,8 @@ font-size: 60px;
 .cart-button:hover {
     background: #FFBF00;
     color: white;
+}
+
+.cart-input-div label, .total-div label, span, .cart-total {
+    background: none
 }
