@@ -6,6 +6,7 @@ import { ADD_TO_CART, UPDATE_CART_QUANTITY } from '../utils/actions';
 import { idbPromise } from '../utils/helpers';
 import '../styles/Search.css'
 
+import bottle from "../assets/images/bx-beer-bottle.png";
 
 
 
@@ -66,20 +67,27 @@ function Search(item) {
 
       return (
         <>
+          <div className='search-div'>
             <input type="text" className="search-words" placeholder="Search for our products here..."></input>
             <button type="submit" className="search-button" onClick={searchItem}>Search</button>
-            <Card.Group itemsPerRow={4}>
+          </div>
+          <div className='card-div' >
+            <Card.Group className='ui-card-div'>
                 {APIData.map((item) => {
                   let price = item.CaseRetail;
                   let name = item.Description;
                     return (
                         <Card className="card">
                             <Card.Content>
-                                <Card.Header>{name}</Card.Header>
-                                <Card.Description>
-                                    {price}
-                                    {item.QuantityAvailable}
-                                    {item.Category}
+                              
+                                <Card.Header className='beer-name'>
+                                <img src={bottle} alt='Beer Placeholder' className='beer-placeholder'/>
+                                 <h2>{name}</h2> 
+                                  </Card.Header>
+                                <Card.Description className='beer-details'>
+                                    <p>{price}</p>
+                                    <p>{item.QuantityAvailable}</p>
+                                    <p>{item.Category}</p>
                                 </Card.Description>
                             </Card.Content>
                             <button itemName={item.Description} itemPrice={item.CaseRetail} onClick={addToCart} className="cart-button">Add to Cart</button>
@@ -87,6 +95,7 @@ function Search(item) {
                     )
                 })}
             </Card.Group>
+            </div>
         </>
     );
     

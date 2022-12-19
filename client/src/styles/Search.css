@@ -1,6 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Dokdo&family=Gloria+Hallelujah&display=swap");
+
+/* font-family: 'Dokdo', cursive; */
+/* font-family: 'Gloria Hallelujah', cursive; */
+
 .search-words {
     background: white;
-    height: 25px;
-    width: 300px;
-    
+    height: 47px;
+    width: 500px;
+    color: black;
+}
+
+.search-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.search-button {
+    background-image: radial-gradient(#dee1e4, #aaa9ad) ;
+    width: 23%;
+    border: none;
+    color: #000C66;
+    font-size: 25px;
+    font-family: 'Gloria Hallelujah', cursive;
+}
+
+.search-button:hover {
+    background: #FFBF00;
+    color: white;
+}
+
+.card {
+    margin: 10px;
+    width: 20%;
+    text-align: center;
+    /* display: flex; */
+    /* flex-direction: column; */
+    border: solid white 1px;
+}
+
+.ui-card-div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background: none;
+}
+
+.beer-name h2 {
+    font-family: 'Dokdo', cursive;
+    font-size: 25px;
+    background: none;
+    margin-bottom: -10px;
+}
+
+.beer-details {
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size: 15px;
+    background: none;
+}
+
+.beer-details p {
+    margin-bottom: -20px;
+    background: none;
+}
+
+.cart-button {
+    margin-top: 20px;
+}
+
+.beer-placeholder {
+    height: 150px;
+    margin-top: 10px;
+    background: none;
 }
