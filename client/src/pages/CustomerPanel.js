@@ -3,6 +3,7 @@ import { useQuery } from '@apollo/client';
 import { QUERY_USER } from  '../utils/queries';
 import { useMutation } from '@apollo/client';
 import { UPDATE_USER } from '../utils/mutations';
+import '../styles/CustomerPanel.css'
 
 function CustomerPanel() {
     const { data } = useQuery(QUERY_USER);
@@ -35,41 +36,44 @@ function CustomerPanel() {
 
     return (
        <>
-       <div>
-        <h2>Update User Info</h2>
-        <form onSubmit={handleFormSubmit}>
-            <div>
-                <label htmlFor="firstName">FIrst Name:</label>
-                <input
-                    name="firstName"
-                    type="firstName"
-                    id="firstName"
-                    onChange={handleChange}
+        <h2 className='update-title'>Update User Info</h2>
+        <form className='update-form' onSubmit={handleFormSubmit}>
+            <div className='update-form-div'>
+                <div>
+                    <label className="update-label" htmlFor="firstName">First Name:</label>
+                    <input
+                        className="update-input"
+                        name="firstName"
+                        type="firstName"
+                        id="firstName"
+                        onChange={handleChange}
                     />
-            </div>
-            <div>
-                <label htmlFor="lastName">Last Name:</label>
-                <input
-                    name="lastName"
-                    type="lastName"
-                    id="lastName"
-                    onChange={handleChange}
-                />
-            </div>
-            <div>
-                <label htmlFor="email">Email:</label>
-                <input 
-                    name="email"
-                    type="email"
-                    id="email"
-                    onChange={handleChange}
+                </div>
+                <div>
+                    <label className="update-label" htmlFor="lastName">Last Name:</label>
+                    <input
+                        className="update-input"
+                        name="lastName"
+                        type="lastName"
+                        id="lastName"
+                        onChange={handleChange}
                     />
-            </div>
-            <div>
-                <button type="submit">Update</button>
+                </div>
+                <div>
+                    <label className="update-label-email" htmlFor="email">Email:</label>
+                    <input 
+                        className="update-input"
+                        name="email"
+                        type="email"
+                        id="email"
+                        onChange={handleChange}
+                    />
+                </div>
+                <div className='update-button-div'>
+                    <button className='update-button' type="submit">Update</button>
+                </div>
             </div>
         </form>
-       </div>
             <div>
                 {user ? (
                 <>
