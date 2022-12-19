@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/static/css/main.a6a45a88.css",
+    "main.js": "/static/js/main.74a8e925.js",
+    "static/js/787.c4e7f8f9.chunk.js": "/static/js/787.c4e7f8f9.chunk.js",
+    "static/media/beverage-express-front.png": "/static/media/beverage-express-front.8138a432d107564ee3d9.png",
+    "static/media/bx-six-pack.png": "/static/media/bx-six-pack.921be200e2af1ae29a51.png",
+    "static/media/december-ad.jpg": "/static/media/december-ad.bb8235e47fd0f7d94594.jpg",
+    "static/media/bev-exp-logo.png": "/static/media/bev-exp-logo.a6d8b6573aaa9708eea7.png",
+    "static/media/bx-beer-bottle.png": "/static/media/bx-beer-bottle.5c1ce7fbac11d2019dea.png",
+    "static/media/background-image.jpg": "/static/media/background-image.b9437bfc96346d3f41f5.jpg",
+    "static/media/clay-logo.png": "/static/media/clay-logo.ce3d9a51531b1484d977.png",
+    "static/media/purple-slushy.png": "/static/media/purple-slushy.75a5264bbc8e1aa6c281.png",
+    "static/media/tea-slushy.png": "/static/media/tea-slushy.4221806a145656fe5220.png",
+    "static/media/red-slushy.png": "/static/media/red-slushy.d06b54ee863f867f70bb.png",
+    "static/media/peach-slushy.png": "/static/media/peach-slushy.301a790212e6d2df9001.png",
+    "static/media/blue-slushy.png": "/static/media/blue-slushy.f6be6747ac9a4f07f7b8.png",
+    "static/media/cream-slushy.png": "/static/media/cream-slushy.d70a50b4febcccac7a01.png",
+    "static/media/pink-slushy.png": "/static/media/pink-slushy.fc2926d223f58d155443.png",
+    "static/media/yellow-slushy.png": "/static/media/yellow-slushy.8f32e413703d1ea6feb9.png",
+    "static/media/orange-slushy.png": "/static/media/orange-slushy.795b1cf1e33679ec9adc.png",
+    "index.html": "/index.html",
+    "main.a6a45a88.css.map": "/static/css/main.a6a45a88.css.map",
+    "main.74a8e925.js.map": "/static/js/main.74a8e925.js.map",
+    "787.c4e7f8f9.chunk.js.map": "/static/js/787.c4e7f8f9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a6a45a88.css",
+    "static/js/main.74a8e925.js"
+  ]
+}
