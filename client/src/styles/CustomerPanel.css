@@ -6,13 +6,13 @@
     color: white;
 }
 
-.update-title {
+.update-title, .order-history-title {
     font-family: 'Dokdo', cursive;
     font-size: 75px;
     text-align: center;
 }
 
-.update-form, .update-title, .update-form, .update-label, .update-label-email, .update-input, .login-button {
+.update-form, .update-title, .update-form, .update-label, .update-label-email, .update-input, .login-button, .order-history-title, .order-history-div, .order-date, .order-details, .order-details ul, .order-details li {
     background: none;
 }
 
@@ -63,4 +63,34 @@ margin-right: 90px;
 .update-form-div div {
     display: flex;
     justify-content: center;
+}
+
+.order-history-title {
+    width: 100%;
+}
+
+.order-history-div {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    border: white solid 3px;
+    padding: 5px;
+   
+}
+
+.order-date {
+    font-family: 'Dokdo', cursive;
+    font-size: 40px;
+}
+
+.order-details {
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size: 20px;
+}
+
+.orders {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
 }

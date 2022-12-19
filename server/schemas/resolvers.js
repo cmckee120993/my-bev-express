@@ -20,8 +20,10 @@ const resolvers = {
 	// For current client-side site
 		user: async (parent, args, context) => {
 			if (context.user) {
-				const user = await User.findById(context.user._id)
-				.populate('orders')
+				const user = await User.findById({_id: context.user._id})
+				.populate('orders');
+				console.log(user);
+				return user;
 			}
 			throw new AuthenticationError('Not logged in');
 		},

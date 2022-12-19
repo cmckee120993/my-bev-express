@@ -1,4 +1,4 @@
-const { Schema, model } = require('mongoose');
+const { Schema, model, SchemaType } = require('mongoose');
 const Order = require('./Order');
 const bcrypt = require('bcrypt');
 
@@ -24,7 +24,10 @@ const userSchema = new Schema(
 			type: String,
 			required: true,
 		},
-		orders: [Order.schema]
+		orders: [
+			{type: Schema.Types.ObjectId,
+			ref: 'Order'}
+		]
 	},
 	// set this to use virtual below
 	{

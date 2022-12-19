@@ -74,33 +74,33 @@ function CustomerPanel() {
                 </div>
             </div>
         </form>
-            <div>
+            <div className="orders">
                 {user ? (
                 <>
-                    <h2> Order History for {user.firstName} {user.lastName}</h2>
+                    <h2 className="order-history-title"> Order History for {user.firstName} {user.lastName}</h2>
                     {user.orders.map((order) => (
-                        <div>
-                            <h3>
+                        <div className='order-history-div'>
+                            <h3 className='order-date'>
                             {new Date(parseInt(order.purchaseDate)).toLocaleDateString()}
                             </h3>
 
-                            <div>
+                            <div className='order-details'>
                                 <ul>
-                                    <li>{order.orderOwner}</li>
-                                    <li>{order.deliveryDate}</li>
-                                    <li>{order.orderTotal}</li>
+                                    <li>Person Picking Up Order: {order.orderOwner}</li>
+                                    <li>Delivery Date: {order.deliveryDate}</li>
+                                    <li>Total: ${order.orderTotal}</li>
+                                    <li>Products:</li>
+                                    {order.products.map(({name, price, quantity}, index) => (
+                                    <ul>
+                                        <li>{name}</li>
+                                        <ul>
+                                        <li>Price for One: {price}</li>
+                                        <li>Quantity: {quantity}</li>
+                                        </ul>
+                                    </ul>
+                                    ))}
                                 </ul>
                             </div>
-                        
-                        <div>
-                            {order.products.map(({name, price, purchaseQuantity}, index) => (
-                                <div>
-                                    <p>{name}</p>
-                                    <p>{price}</p>
-                                    <p>{purchaseQuantity}</p>
-                                </div>
-                            ))}
-                        </div>
                         </div>
                     ))}
                 </>
