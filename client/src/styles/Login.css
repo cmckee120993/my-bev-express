@@ -12,7 +12,7 @@
     text-align: center;
 }
 
-.login-form, .login-title, .login-form div, .login-label, .login-input, .login-button {
+.login-form, .login-title, .login-form div, .login-label, .login-label-email, .login-input {
     background: none;
 }
 
@@ -57,7 +57,7 @@ margin-right: 60px;
 }
 
 .login-button {
-    background-image: radial-gradient(#dee1e4, #aaa9ad) ;
+    background-image: radial-gradient(#dee1e4, #aaa9ad);
     color: #000C66;
     font-family: 'Gloria Hallelujah', cursive;
     font-size: 20px

@@ -9,6 +9,9 @@ header {
     width: 100%;
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: -200px;
 }
 
 .tagline {
@@ -20,24 +23,50 @@ header {
     z-index: 1;
 }
 
-/* .store-image {
-    float: right; 
-    width: 75%;
-    height: 25%;
-    position: relative;
+.tagline-div {
+    z-index: 1;
+}
+
+.store-image-div {
+    display: flex;
+    justify-content: center;
+    top: -200px;
     z-index: 0;
+}
+
+.store-image {
     background: none;
-} */
+    width: 100%;
+    z-index: 0;
+}
+
+@media only screen and (max-width: 550px) {
+    .tagline {
+        font-size: 40px;
+    }
+
+    .store-image-div {
+        margin-bottom: 125px;
+    }
+}
 
 @media only screen and (min-width: 550px) {
     .tagline {
         font-size: 50px;
+    }
+
+    .store-image-div {
+        margin-bottom: 125px;
     }
 }
 
 @media only screen and (min-width: 825px) {
     .tagline {
         font-size: 75px;
+    }
+
+    .store-image {
+        width: 75%;
     }
 }
 

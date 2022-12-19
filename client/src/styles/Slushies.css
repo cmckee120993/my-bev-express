@@ -16,7 +16,7 @@ margin-top: -5%;
 background: none;
 }
 
-.slushy-slideshow, .each-slide-effect, .slushy-image, .image, .react-slideshow-container, .react-slideshow-wrapper, #root div {
+.each-slide-effect, .slushy-image, .image, .react-slideshow-container, .react-slideshow-wrapper, #root div {
   background: none;
 }
 

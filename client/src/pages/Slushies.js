@@ -53,7 +53,7 @@ const Example = () => {
               height: "500px",
             }}
           >
-            <span className="slushy-name">1</span>
+            
             <ul className='slushy-description'>
                 <li>1. Strawberry Daiquiri </li>
                 <li> MXD Drinks Co.</li>
@@ -72,7 +72,7 @@ const Example = () => {
               height: "500px",
             }}
           >
-            <span className="slushy-name">2</span>
+          
             <ul className='slushy-description'>
                 <li>2. J-Series Blue Lemonade </li>
                 <li> Joose</li>
@@ -91,7 +91,7 @@ const Example = () => {
               height: "500px",
             }}
           >
-            <span className="slushy-name">3</span>
+            
             <ul className='slushy-description'>
                 <li>3. Margarita</li>
                 <li> MXD Drinks Co.</li>
@@ -110,7 +110,7 @@ const Example = () => {
               height: "500px",
             }}
           >
-            <span className="slushy-name">4</span>
+            
             <ul className='slushy-description'>
                 <li>4. Southern Peach Cocktail</li>
                 <li>Jack Daniel's Beverage Co.</li>
@@ -129,7 +129,7 @@ const Example = () => {
               height: "500px",
             }}
           >
-            <span className="slushy-name">5</span>
+            
             <ul className='slushy-description'>
                 <li>5. Jamaican Me Happy</li>
                 <li>Seagram's Escapes</li>
@@ -148,7 +148,7 @@ const Example = () => {
               height: "500px",
             }}
           >
-            <span className="slushy-name">6</span>
+           
             <ul className='slushy-description'>
                 <li>6. Mai Tai</li>
                 <li>MXD Drinks Co. </li>
@@ -167,7 +167,7 @@ const Example = () => {
               height: "500px",
             }}
           >
-            <span className="slushy-name">7</span>
+           
             <ul className='slushy-description'>
                 <li>7. Grape Blowout</li>
                 <li>Neon Burst</li>
@@ -186,7 +186,7 @@ const Example = () => {
               height: "500px",
             }}
           >
-            <span className="slushy-name">8</span>
+            
             <ul className='slushy-description'>
                 <li>8. Mang-O-Rita</li>
                 <li>Bud Light Lime</li>
@@ -205,7 +205,7 @@ const Example = () => {
               height: "500px",
             }}
           >
-            <span className="slushy-name">9</span>
+            
             <ul className='slushy-description'>
                 <li>9. Long Island Iced Tea</li>
                 <li>MXD Drink Co.</li>
@@ -224,7 +224,7 @@ const Example = () => {
               height: "500px",
             }}
           >
-            <span className="slushy-name">10</span>
+            
             <ul className='slushy-description'>
                 <li>10. Irish Cream Latte</li>
                 <li>Rebel Hard Coffee</li>
@@ -243,7 +243,7 @@ const Example = () => {
               height: "500px",
             }}
           >
-            <span className="slushy-name">11</span>
+           
             <ul className='slushy-description'>
                 <li>11. J-Series Blackberry</li>
                 <li>Joose</li>
@@ -262,7 +262,7 @@ const Example = () => {
               height: "500px",
             }}
           >
-            <span className="slushy-name">12</span>
+            
             <ul className='slushy-description'>
                 <li>12. Niagara Blush</li>
                 <li>SpringGate Vineyard</li>

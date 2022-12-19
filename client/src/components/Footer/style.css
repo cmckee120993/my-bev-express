@@ -5,6 +5,10 @@ footer {
     flex-direction: column;
 }
 
+.social-links a {
+    background: none;
+}
+
 .footer-logo, .creator {
     display: flex;
     justify-content: center;

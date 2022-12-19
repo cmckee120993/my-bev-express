@@ -2,7 +2,7 @@ import React from 'react';
 import './style.css';
 import Cart from '../Cart';
 
-// import Store from '../assets/images/'
+import Store from '../../assets/images/beverage-express-front.png'
 
 
 function Header() {
@@ -11,8 +11,12 @@ function Header() {
         <>
         <Cart/>
             <header className="header">
-                <p className="tagline">We got a whole lotta beer!</p>
-                {/* <img className="store-image" src={Store} alt="Beverage Express Storefront"/> */}
+                <div className='tagline-div'>
+                    <p className="tagline">We got a whole lotta beer!</p>
+                </div>
+                <div className='store-image-div'>
+                    <img className="store-image" src={Store} alt="Beverage Express Storefront"/>
+                </div>
             </header>
             
         </>
