@@ -6,10 +6,10 @@ My Bev Express is a full MERN stack web application for clients of Beverage Expr
 
 ## Deployment
 
-For the purpose of this project, it is deployed on Heroku. You can access it at LINK. The project will eventually be deployed via a site hoster for my parents business.
+For the purpose of this project, it is deployed on Heroku. You can access it at https://my-bev-express.herokuapp.com/. The project will eventually be deployed via a site hoster for my parents business.
 
 ## Screenshots
-<img src="./src/assets/images/SCREENSHOT" alt="Screenshot of Clay's Professional Portfolio">
+<img src="./src/assets/images/my-bev-express-screenshot" alt="Screenshot of My Beverage Express website">
 
 ## Credits
 
