@@ -32,7 +32,7 @@ const Example = () => {
 
   return (
     <>
-      <div className='slushy-title-div'>
+      <div className="slushy-title-div">
         <h2 className="slushy-title">Adult Slushies</h2>
         <img
           className="slushy-header-image"
@@ -53,11 +53,10 @@ const Example = () => {
               height: "500px",
             }}
           >
-            
-            <ul className='slushy-description'>
-                <li>1. Strawberry Daiquiri </li>
-                <li> MXD Drinks Co.</li>
-                <li>12% ABV</li>
+            <ul className="slushy-description">
+              <li>1. Strawberry Daiquiri </li>
+              <li> MXD Drinks Co.</li>
+              <li>12% ABV</li>
             </ul>
           </div>
         </div>
@@ -72,11 +71,10 @@ const Example = () => {
               height: "500px",
             }}
           >
-          
-            <ul className='slushy-description'>
-                <li>2. J-Series Blue Lemonade </li>
-                <li> Joose</li>
-                <li>14% ABV</li>
+            <ul className="slushy-description">
+              <li>2. J-Series Blue Lemonade </li>
+              <li> Joose</li>
+              <li>14% ABV</li>
             </ul>
           </div>
         </div>
@@ -91,11 +89,10 @@ const Example = () => {
               height: "500px",
             }}
           >
-            
-            <ul className='slushy-description'>
-                <li>3. Margarita</li>
-                <li> MXD Drinks Co.</li>
-                <li>12% ABV</li>
+            <ul className="slushy-description">
+              <li>3. Margarita</li>
+              <li> MXD Drinks Co.</li>
+              <li>12% ABV</li>
             </ul>
           </div>
         </div>
@@ -110,11 +107,10 @@ const Example = () => {
               height: "500px",
             }}
           >
-            
-            <ul className='slushy-description'>
-                <li>4. Southern Peach Cocktail</li>
-                <li>Jack Daniel's Beverage Co.</li>
-                <li>4.8% ABV</li>
+            <ul className="slushy-description">
+              <li>4. Southern Peach Cocktail</li>
+              <li>Jack Daniel's Beverage Co.</li>
+              <li>4.8% ABV</li>
             </ul>
           </div>
         </div>
@@ -129,11 +125,10 @@ const Example = () => {
               height: "500px",
             }}
           >
-            
-            <ul className='slushy-description'>
-                <li>5. Jamaican Me Happy</li>
-                <li>Seagram's Escapes</li>
-                <li>3.2% ABV</li>
+            <ul className="slushy-description">
+              <li>5. Jamaican Me Happy</li>
+              <li>Seagram's Escapes</li>
+              <li>3.2% ABV</li>
             </ul>
           </div>
         </div>
@@ -148,11 +143,10 @@ const Example = () => {
               height: "500px",
             }}
           >
-           
-            <ul className='slushy-description'>
-                <li>6. Mai Tai</li>
-                <li>MXD Drinks Co. </li>
-                <li>12% ABV</li>
+            <ul className="slushy-description">
+              <li>6. Mai Tai</li>
+              <li>MXD Drinks Co. </li>
+              <li>12% ABV</li>
             </ul>
           </div>
         </div>
@@ -167,11 +161,10 @@ const Example = () => {
               height: "500px",
             }}
           >
-           
-            <ul className='slushy-description'>
-                <li>7. Grape Blowout</li>
-                <li>Neon Burst</li>
-                <li>8% ABV</li>
+            <ul className="slushy-description">
+              <li>7. Grape Blowout</li>
+              <li>Neon Burst</li>
+              <li>8% ABV</li>
             </ul>
           </div>
         </div>
@@ -186,11 +179,10 @@ const Example = () => {
               height: "500px",
             }}
           >
-            
-            <ul className='slushy-description'>
-                <li>8. Mang-O-Rita</li>
-                <li>Bud Light Lime</li>
-                <li>8% ABV</li>
+            <ul className="slushy-description">
+              <li>8. Mang-O-Rita</li>
+              <li>Bud Light Lime</li>
+              <li>8% ABV</li>
             </ul>
           </div>
         </div>
@@ -205,11 +197,10 @@ const Example = () => {
               height: "500px",
             }}
           >
-            
-            <ul className='slushy-description'>
-                <li>9. Long Island Iced Tea</li>
-                <li>MXD Drink Co.</li>
-                <li>12% ABV</li>
+            <ul className="slushy-description">
+              <li>9. Long Island Iced Tea</li>
+              <li>MXD Drink Co.</li>
+              <li>12% ABV</li>
             </ul>
           </div>
         </div>
@@ -224,11 +215,10 @@ const Example = () => {
               height: "500px",
             }}
           >
-            
-            <ul className='slushy-description'>
-                <li>10. Irish Cream Latte</li>
-                <li>Rebel Hard Coffee</li>
-                <li>5% ABV</li>
+            <ul className="slushy-description">
+              <li>10. Irish Cream Latte</li>
+              <li>Rebel Hard Coffee</li>
+              <li>5% ABV</li>
             </ul>
           </div>
         </div>
@@ -243,12 +233,11 @@ const Example = () => {
               height: "500px",
             }}
           >
-           
-            <ul className='slushy-description'>
-                <li>11. J-Series Blackberry</li>
-                <li>Joose</li>
-                <li>14% ABV</li>
-            </ul> 
+            <ul className="slushy-description">
+              <li>11. J-Series Blackberry</li>
+              <li>Joose</li>
+              <li>14% ABV</li>
+            </ul>
           </div>
         </div>
         <div className="each-slide-effect">
@@ -262,11 +251,10 @@ const Example = () => {
               height: "500px",
             }}
           >
-            
-            <ul className='slushy-description'>
-                <li>12. Niagara Blush</li>
-                <li>SpringGate Vineyard</li>
-                <li>8% ABV</li>
+            <ul className="slushy-description">
+              <li>12. Niagara Blush</li>
+              <li>SpringGate Vineyard</li>
+              <li>8% ABV</li>
             </ul>
           </div>
         </div>

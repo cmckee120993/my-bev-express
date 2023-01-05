@@ -2,7 +2,7 @@ import React from "react";
 import { useForm, ValidationError } from "@formspree/react";
 import "../styles/Home.css";
 
-import Ad from '../assets/images/december-ad.jpg';
+import Ad from "../assets/images/december-ad.jpg";
 
 function Home() {
   const [state, handleSubmit] = useForm("mgeqjglb");
@@ -19,23 +19,31 @@ function Home() {
           <h3 className="listserv-header">Sign Up for Our Newsletter</h3>
           <p className="listserv-description">
             We are very active on social media, but if being social isn't your
-            thing, sign up to join our email listserv. We will be sending out our
-            ads, publicity, product features, and information about special
-            events. You will receive about one to two emails a month (so it won't
-            take up too much space in your inbox).
+            thing, sign up to join our email listserv. We will be sending out
+            our ads, publicity, product features, and information about special
+            events. You will receive about one to two emails a month (so it
+            won't take up too much space in your inbox).
           </p>
           <form className="listserv-form" onSubmit={handleSubmit}>
             <label htmlFor="name">Name</label>
             <input id="name" type="text" name="name" />
             <label htmlFor="email">Email</label>
             <input id="email" type="email" name="email" />
-            <ValidationError prefix="Email" field="email" errors={state.errors} />
+            <ValidationError
+              prefix="Email"
+              field="email"
+              errors={state.errors}
+            />
             <button type="submit" disabled={state.submitting}>
               Submit
             </button>
           </form>
         </div>
-       <img className="recent-ad-image" src={Ad} alt="Beverage Express's Ad of the Month"/>
+        <img
+          className="recent-ad-image"
+          src={Ad}
+          alt="Beverage Express's Ad of the Month"
+        />
       </div>
     </>
   );
