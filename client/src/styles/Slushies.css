@@ -29,31 +29,16 @@ background: none;
   background: none;
 }
 
-.each-slide-effect span {
-  padding: 20px;
-  font-size: 100px;
-  background: none;
-  text-align: center;
-  font-family: 'Gloria Hallelujah', cursive;
-  position: relative;
-  top: 225px;
-  left: 60px;
+.each-slide-effect {
+  width: 100%;
 }
 
-.slushy-description {
-  color: white;
-  background: none;
-  font-family: 'Gloria Hallelujah', cursive;
-  list-style: none;
-  font-size: 30px;
-  display: flex;
-  float: right;
-  flex-direction: column;
-  margin-top: 200px;
-  margin-right: 25%;
+.slushy-image {
+  height: 500px;
 }
 
-.slushy-description li {
-  background: none;
-  text-align: center;
+@media only screen and (min-width: 890px) {
+.slushy-image {
+  height: 1000px;
+}
 }
